@@ -2,32 +2,26 @@
 
 /* fix 导航固定高度 */
 body {
-  padding-top: 50px;
-}
-
-/* 一级导航左侧brand */
-.navbar-brand {
-  color: #FFFFFF!important;
-}
-
-/* 搜索框 */
-.navbar-form>.input-group {
-  width:300px
-}
-
-/* 导航搜索表单 */
-.navbar-form button {
-  background-color: #ddd
+  padding-top: 52px;
 }
 
 /* 一级导航 */
+.navbar-brand {
+  color: #FFFFFF!important;
+}
+.navbar-form>.input-group {
+  width:300px
+}
+.navbar-form button {
+  background-color: #ddd
+}
 .navbar-default {
   padding: 0 35px 0 35px;
 }
 
 /* fix 主题宽度 */
 .container-fluid {
-  padding: 15px 15px;
+  padding: 0px 15px;
 }
 
 /* 未读标记 */
@@ -37,8 +31,6 @@ body {
   top: 12px;
   padding: 1px 3px;
 }
-
-/* 其他站点未读标记 */
 .other-site-unread {
   display: inline-block;
   width: 16px;
@@ -50,35 +42,72 @@ body {
 .icon-bell, .icon-edit, .icon-cog, .icon-th {
   font-size: 18px;
 }
-
-/* 一级导航右侧图标 */
 .fix-Navicon-padding {
   padding-top: 17px!important;
-  padding-bottom: 0px!important;
+  padding-bottom: 14px!important;
 }
 
-/* 页面标题 */
-.page-header {
-  padding-bottom: 0px;
-  margin: 0 0 20px;
-  border-bottom: 0px;
+/* 页面导航 */
+.page-nav {
+  height: 44px;
+  background-color: #F5F5F5;
+  margin-bottom: 20px;
+}
+.page-nav h4 {
+  line-height: 24px;
+  padding-left: 35px;
+}
+/* 默认状态 */
+.page-nav a {
+  color: #333;
+  padding: 11px 0px!important;
+}
+/* 激活状态 */
+.page-nav .active a {
+  border-bottom: 2px solid;
+  border-bottom-color: #2299bb;
+  background-color: #F5F5F5!important;
+  color: #333!important;
+  border-radius: 0px!important;
+}
+/* 光标聚焦与经过 */
+.page-nav li>a:hover, .page-nav li>a:focus {
+  border-bottom: 2px solid;
+  border-bottom-color: #2299bb;
+  background-color: #F5F5F5!important;
+  color: #333!important;
+  border-radius: 0px!important;
+} 
+.page-nav li {
+  margin:  0 18px!important;
 }
 
 /* 左侧导航设置图标颜色 */
 .icon-cog-color {
   color: #777;
 }
+.panel-group .icon-cog {
+  font-size: 12px;
+  line-height: 18px;
+}
+.panel {
+  -webkit-box-shadow: 0 0px 0px;
+  box-shadow: 0 0px 0px;
+}
 
-/* 二级导航右侧图标 */
+/* 三级导航右侧图标 */
 .icon-wrench, .icon-th-large {
   padding: 0 7px;
 }
-
-/* 二级导航右侧按钮 */
 .breadcrumb-btn{
   position: absolute;
   right: 30px;
   top: 8px;
+}
+
+/* 表格右上角按钮 */
+.table .icon-cog {
+  font-size: 12px;
 }
 
 /* 右侧栏客户端图标 */
@@ -102,8 +131,6 @@ body {
   border-top-color:#fff!important;
   border-color: #fff!important;
 }
-
-/* 手风琴面板链接 */
 .panel-collapse a {
   color: #777;
 }

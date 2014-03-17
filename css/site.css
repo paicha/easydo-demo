@@ -1,0 +1,111 @@
+﻿@charset "utf-8";
+
+/* fix 导航固定高度 */
+body {
+  padding-top: 70px;
+}
+
+/* 搜索框 */
+.navbar-form>.input-group {
+  width:300px
+}
+
+/* 导航搜索表单 */
+.navbar-form button {
+  background-color: #ddd
+}
+
+/* 一级导航 */
+.navbar-default {
+  padding: 0 35px 0 35px;
+}
+
+/* fix 主题宽度 */
+.container-fluid {
+  padding: 0 15px;
+}
+
+/* 未读标记 */
+.badge {
+  background-color: #e74c3c;
+  position: absolute;
+  top: 12px;
+  padding: 1px 3px;
+}
+
+/* 其他站点未读标记 */
+.other-site-unread {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(../img/new_msg.png);
+}
+
+/* 一级导航右侧图标 */
+.icon-bell, .icon-edit, .icon-cog, .icon-th {
+  font-size: 18px;
+}
+
+/* 一级导航右侧图标 */
+.fix-Navicon-padding {
+  padding-top: 17px!important;
+  padding-bottom: 0px!important;
+}
+
+/* 左侧导航设置图标颜色 */
+.icon-cog-color {
+  color: #777;
+}
+
+/* 二级导航左侧图标 */
+.icon-wrench, .icon-th-large {
+  padding: 0 7px;
+}
+
+/* 右侧栏客户端图标 */
+.icon-tablet, .icon-mobile-phone, .icon-desktop {
+  margin-left: 5px;
+}
+
+/* 下拉菜单 */
+.dropdown-menu {
+  min-width: 98px;
+}
+
+/* 左侧导航链接 */
+.panel-title a:hover {
+  text-decoration: none;
+}
+
+/* 手风琴面板 */
+.panel-body, .panel-default{
+  border-top:0px!important;
+  border-top-color:#fff!important;
+  border-color: #fff!important;
+}
+
+/* 手风琴面板链接 */
+.panel-collapse a {
+  color: #777;
+}
+
+/* 表格 */
+.table {
+  margin-bottom: 0px;
+}
+
+/* 分页按钮 */
+.pagination {
+  margin-top: 10px;
+}
+
+/* 关注与收藏按钮 */
+.btn-eye-color, .btn-star-color {
+  background-color: #F4F4F4;
+}
+
+/* .col-sm-2 {
+  position: relative;
+  height: 200px;
+  overflow: auto;
+} */

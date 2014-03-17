@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/site.css">
+    <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><strong>易度云办公</strong></a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">工作台</a></li>
+          <li><a href="#">客户管理</a></li>
+          <li><a href="#">项目中心</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">更多 <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">工作组</a></li>
+              <li><a href="#">日常办公</a></li>
+              <li><a href="#">工作计划</a></li>
+              <li class="divider"></li>
+              <li><a href="#">人事管理</a></li>
+              <li><a href="#">资产管理</a></li>
+              <li class="divider"></li>
+              <li><a href="#">工作报告</a></li>
+              <li><a href="#">财务流程</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+
+          <form class="navbar-form navbar-left" role="search">
+            <div class="input-group">
+              <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">全站 <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">当前位置</a></li>
+                  <li><a href="#">高级搜索</a></li>
+                </ul>
+              </div>
+              <input type="text" class="form-control">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button"><span class="icon-search"></span></button>
+              </span>
+            </div>
+          </form>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">主站<span class="other-site-unread"></span><span class="caret"></span></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">平台部 <span class="other-site-unread"></span></a></li>
+              <li><a href="#">代理商门户</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle fix-Navicon-padding" data-toggle="dropdown"><span class="icon-bell"><span class="badge">2</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">你的 部署网站 任务收到了新评论</a></li>
+              <li><a href="#">小红 加入了开发小组</a></li>
+              <li><a href="#">小花 提交了一个新的支持单</a></li>
+              <li><a href="#">小明 关注了你</a></li>
+              <li><a href="#">小王 给你发来了消息</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#" class="fix-Navicon-padding"><span class="icon-th"></span></a></li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle fix-Navicon-padding" data-toggle="dropdown"><span class="icon-cog"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">设置一</a></li>
+              <li><a href="#">设置二</a></li>
+              <li><a href="#">设置三</a></li>
+              <li class="divider"></li>
+              <li><a href="#">退出登录</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="fix-Navicon-padding" data-toggle="modal" data-target="#myModal"><span class="icon-edit"></span></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-sm-2">
+
+          <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                    我的工作台
+                  </a><span class="icon-cog pull-right icon-cog-color"></span>
+                </h4>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse in">
+                <ul class="nav nav-pills nav-stacked  ">
+                  <li><a href="#"><span class="icon-check"></span> 待办事项</a></li>
+                  <li class="active"><a href="#"><span class="icon-cloud"></span> 个人网盘</a></li>
+                  <li><a href="#"><span class="icon-envelope"></span> 信箱</a></li>
+                  <li><a href="#"><span class="icon-calendar"></span> 日程</a></li>
+                  <li><a href="#"><span class="icon-bookmark"></span> 收藏夹</a></li>
+                  <li><a href="#"><span class="icon-user"></span> 全部人员</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                    栏目导航
+                  </a><span class="icon-cog pull-right icon-cog-color"></span>
+                </h4>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse">
+                <ul class="nav nav-pills nav-stacked">
+                  <li><a href="#"><span class="icon-plus"></span> 客户管理</a></li>
+                  <li><a href="#"><span class="icon-plus"></span> 客户</a></li>
+                  <li><a href="#"><span class="icon-plus"></span> 日程</a></li>
+                  <li><a href="#"><span class="icon-plus"></span> 支持服务</a></li>
+                  <li><a href="#"><span class="icon-plus"></span> 部门文件</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-8">
+          <ol class="breadcrumb">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">工作台</a></li>
+            <li class="active">个人网盘</li>
+            <div class="pull-right">
+              <div class="btn-group">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                    <span class="icon-th-large"></span>
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">内容列表 <span class="icon-ok"></span></a></li>
+                    <li><a href="#">摘要清单</a></li>
+                    <li><a href="#">缩略图</a></li>
+                    <li><a href="#">分类清单</a></li>
+                    <li><a href="#">最近更新</a></li>
+                    <li><a href="#">纵览列表</a></li>
+                  </ul>
+                </div>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                    <span class="icon-wrench"></span>
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">共享</a></li>
+                    <li><a href="#">文件清单</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </ol>
+
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th><input type="checkbox"></th>
+                  <th>标题</th>
+                  <th>管理人</th>
+                  <th>标签</th>
+                  <th>大小</th>
+                  <th>修改时间<span class="caret"></span></th>
+                  <th> <a href="#"><span class="icon-cog"></span></a></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><span class="icon-folder-close-alt"></span> Daily</td>
+                  <td>赖嘉伟</td>
+                  <td></td>
+                  <td>12项</td>
+                  <td>01/04/2012</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><span class="icon-folder-close-alt"></span> Knowledge</td>
+                  <td>赖嘉伟</td>
+                  <td></td>
+                  <td>123项</td>
+                  <td>01/04/2012</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><span class="icon-folder-close-alt"></span> temporary</td>
+                  <td>赖嘉伟</td>
+                  <td>测试</td>
+                  <td>444项</td>
+                  <td>01/04/2012</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><span class="icon-file-alt"></span> 文件1.txt</td>
+                  <td>赖嘉伟</td>
+                  <td></td>
+                  <td>123KB</td>
+                  <td>01/04/2012</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><span class="icon-file-alt"></span> 文件2.pptx</td>
+                  <td>赖嘉伟</td>
+                  <td></td>
+                  <td>123KB</td>
+                  <td>01/04/2012</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><span class="icon-file-alt"></span> 文件1.txt</td>
+                  <td>赖嘉伟</td>
+                  <td></td>
+                  <td>123KB</td>
+                  <td>01/04/2012</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><span class="icon-file-alt"></span> 文件2.pptx</td>
+                  <td>赖嘉伟</td>
+                  <td></td>
+                  <td>123KB</td>
+                  <td>01/04/2012</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><span class="icon-file-alt"></span> 文件1.txt</td>
+                  <td>赖嘉伟</td>
+                  <td></td>
+                  <td>123KB</td>
+                  <td>01/04/2012</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><span class="icon-file-alt"></span> 文件2.pptx</td>
+                  <td>赖嘉伟</td>
+                  <td></td>
+                  <td>123KB</td>
+                  <td>01/04/2012</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><span class="icon-file-alt"></span> 文件1.txt</td>
+                  <td>赖嘉伟</td>
+                  <td></td>
+                  <td>123KB</td>
+                  <td>01/04/2012</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><span class="icon-file-alt"></span> 文件2.pptx</td>
+                  <td>赖嘉伟</td>
+                  <td></td>
+                  <td>123KB</td>
+                  <td>01/04/2012</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="pagination pull-right">
+            <li><a href="#">&laquo;</a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-2">
+
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+              <span class="icon-plus"></span> 文件 <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">上传文件</a></li>
+              <li><a href="#">新建文件</a></li>
+              <li><a href="#">快捷方式</a></li>
+            </ul>
+          </div>
+
+          <br><br>
+          <button type="button" class="btn btn-default btn-sm"><span class="icon-plus"></span> 新建文件夹</button>
+          <br><br>
+          <div class="btn-group">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default btn-eye-color btn-sm dropdown-toggle" data-toggle="dropdown">
+                <span class="icon-eye-open"> 已关注</span>
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">通知方式</a></li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-default btn-sm">12</button>
+          </div>
+          &nbsp;
+          <div class="btn-group">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default btn-star-color btn-sm">
+                <span class="icon-star"></span>
+              </button>
+            </div>
+            <button type="button" class="btn btn-default btn-sm">5</button>
+          </div>
+          <br><br>
+
+          <div class="panel-group" id="accordion2">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion2" href="#collapse1">
+                    <span class="caret"></span> 共享情况
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse1" class="panel-collapse collapse in">
+                <div class="panel-body">
+                  <p>拥有者：赖嘉伟</p>
+                  <p>编辑者：</p>
+                  <p>查看者：</p>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion2" href="#collapse2">
+                    <span class="caret"></span> 标签组
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse2" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <p>暂无标签组</p>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion2" href="#collapse4">
+                    <span class="caret"></span> 文件夹信息
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse4" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <p>管理人： 赖嘉伟</p>
+                  <p>创建时间： 2014-02-10</p>
+                  <p>文件夹大小： 0 KB</p>
+                  <p>已使用： 7326.84 M</p>
+                  <p>剩余空间： 2913.16 M</p>
+                  <p>操作历史：<a href="#">查看详细</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion2" href="#collapse6">
+                    <span class="caret"></span> 客户端 App 访问
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse6" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <p>客户端：<a href="http://www.wandoujia.com/apps/com.schimera.webdavnavlite" target="_blank">安卓</a><a href="https://itunes.apple.com/cn/app/webdav-jing-ling/id514325817?mt=8" target="_blank"><span class="icon-mobile-phone icon-large"></span></a> <a href="https://itunes.apple.com/hk/app/webdav-navigator/id382551345?mt=8" target="_blank"><span class="icon-tablet icon-large"></span></a> <a href="http://cyberduck.ch/" target="_blank"><span class="icon-desktop"></span></a></p>
+                  <p>Windows 系统：</p>
+                  <div class="input-group">
+                    <input type="text" class="form-control" value="http://zopen.easydo.cn:80/default/desks/users.laijiawei/files/Daily">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">进入</button>
+                    </span>
+                  </div>
+                  <br>
+                  <p>如不能正常使用<br>请参考<a href="http://zopen.easydo.cn/default/desks/users.laijiawei/files/Daily/davhelp.html" target="_blank">帮助设置</a></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">标题</h4>
+          </div>
+          <div class="modal-body">
+            内容
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-primary">发布</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  </body>
+</html>

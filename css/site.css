@@ -5,6 +5,11 @@ body {
   padding-top: 50px;
 }
 
+/* 一级导航左侧brand */
+.navbar-brand {
+  color: #FFFFFF!important;
+}
+
 /* 搜索框 */
 .navbar-form>.input-group {
   width:300px
@@ -67,6 +72,13 @@ body {
 /* 二级导航右侧图标 */
 .icon-wrench, .icon-th-large {
   padding: 0 7px;
+}
+
+/* 二级导航右侧按钮 */
+.breadcrumb-btn{
+  position: absolute;
+  right: 30px;
+  top: 8px;
 }
 
 /* 右侧栏客户端图标 */

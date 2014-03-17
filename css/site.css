@@ -2,7 +2,7 @@
 
 /* fix 导航固定高度 */
 body {
-  padding-top: 70px;
+  padding-top: 50px;
 }
 
 /* 搜索框 */
@@ -22,7 +22,7 @@ body {
 
 /* fix 主题宽度 */
 .container-fluid {
-  padding: 0 15px;
+  padding: 15px 15px;
 }
 
 /* 未读标记 */
@@ -52,12 +52,19 @@ body {
   padding-bottom: 0px!important;
 }
 
+/* 页面标题 */
+.page-header {
+  padding-bottom: 0px;
+  margin: 0 0 20px;
+  border-bottom: 0px;
+}
+
 /* 左侧导航设置图标颜色 */
 .icon-cog-color {
   color: #777;
 }
 
-/* 二级导航左侧图标 */
+/* 二级导航右侧图标 */
 .icon-wrench, .icon-th-large {
   padding: 0 7px;
 }
@@ -103,9 +110,3 @@ body {
 .btn-eye-color, .btn-star-color {
   background-color: #F4F4F4;
 }
-
-/* .col-sm-2 {
-  position: relative;
-  height: 200px;
-  overflow: auto;
-} */

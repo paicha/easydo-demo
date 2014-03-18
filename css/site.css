@@ -52,6 +52,10 @@ body {
   height: 44px;
   background-color: #F5F5F5;
   margin-bottom: 20px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
 }
 .page-nav h4 {
   line-height: 24px;
@@ -80,6 +84,10 @@ body {
 } 
 .page-nav li {
   margin:  0 18px!important;
+}
+
+.fix-container {
+  margin-top: 60px;
 }
 
 /* 左侧导航设置图标颜色 */
@@ -148,4 +156,13 @@ body {
 /* 关注与收藏按钮 */
 .btn-eye-color, .btn-star-color {
   background-color: #F4F4F4;
+}
+
+/* 消息提示框 */
+.alert {
+  z-index: 1050;
+  position: fixed;
+  top: 52px;
+  left: 32%;
+  width: 35%;
 }

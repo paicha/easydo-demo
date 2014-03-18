@@ -118,7 +118,7 @@
       </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid fix-container">
       <div class="row">
 
         <div class="col-sm-2">
@@ -357,7 +357,7 @@
           &nbsp;
           <div class="btn-group">
             <div class="btn-group">
-              <button type="button" class="btn btn-default btn-star-color btn-sm">
+              <button onclick="displayAlert()" type="button" class="btn btn-default btn-star-color btn-sm">
                 <span class="icon-star"></span>
               </button>
             </div>
@@ -464,7 +464,18 @@
       </div>
     </div>
 
+    <div class="alert alert-success alert-dismissable fade in text-center" id="alert" style="display:none">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      收藏修改成功
+    </div>
+
     <script src="js/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+      function displayAlert()
+      {
+      document.getElementById("alert").style.display="block";
+      }
+    </script>
   </body>
 </html>

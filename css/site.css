@@ -97,9 +97,8 @@ body {
   font-size: 12px;
   line-height: 18px;
 }
-.panel {
-  -webkit-box-shadow: 0 0px 0px;
-  box-shadow: 0 0px 0px;
+.heading-border {
+  border-bottom: 1px solid #ddd!important;
 }
 
 /* 三级导航右侧图标 */
@@ -133,12 +132,8 @@ body {
 }
 
 /* 手风琴面板 */
-.panel-body, .panel-default{
-  border-top:0px!important;
-  border-top-color:#fff!important;
-  border-color: #fff!important;
-}
 .panel-collapse a {
+  border-radius: 0px!important;
   color: #777;
 }
 

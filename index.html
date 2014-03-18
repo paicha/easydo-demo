@@ -23,7 +23,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><strong>易度云办公</strong></a>
+        <a class="navbar-brand" href="#">易度云办公</a>
       </div>
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -59,7 +59,7 @@
                   <li><a href="#">高级搜索</a></li>
                 </ul>
               </div>
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" value="搜索" onfocus="if (value =='搜索'){value =''}" onblur="if (value ==''){value='搜索'}">
               <span class="input-group-btn">
                 <button class="btn btn-default" type="button"><span class="icon-search"></span></button>
               </span>
@@ -84,9 +84,6 @@
               <li><a href="#">小王 给你发来了消息</a></li>
             </ul>
           </li>
-
-          <li><a href="#" class="fix-Navicon-padding"><span class="icon-th"></span></a></li>
-
           <li class="dropdown">
             <a href="#" class="dropdown-toggle fix-Navicon-padding" data-toggle="dropdown"><span class="icon-cog"></span></a>
             <ul class="dropdown-menu">
@@ -101,11 +98,11 @@
         </ul>
       </div>
     </nav>
-
+    <div class="clearfix"></div>
     <div class="container-fluid page-nav">
       <div class="row">
         <div class="col-sm-4"><h4>V5.0 储存和通知重构</h4></div>
-        <div class="col-sm-4">
+        <div class="col-sm-5">
           <ul class="nav nav-pills">
             <li class="active"><a href="#">概况</a></li>
             <li><a href="#">计划</a></li>
@@ -114,11 +111,11 @@
             <li><a href="#">文件</a></li>
           </ul>
         </div>
-        <div class="col-sm-4"><!-- 备用 --></div>
+        <div class="col-sm-3"><!-- 备用 --></div>
       </div>
     </div>
-
-    <div class="container-fluid fix-container">
+    <div class="clearfix"></div>
+    <div class="container-fluid">
       <div class="row">
 
         <div class="col-sm-2">
@@ -340,7 +337,7 @@
           </div>
 
           <br><br>
-          <button type="button" class="btn btn-default btn-sm"><span class="icon-plus"></span> 新建文件夹</button>
+          <button type="button" class="btn btn-default btn-sm"><span class="icon-plus"></span> 文件夹</button>
           <br><br>
           <div class="btn-group">
             <div class="btn-group">
@@ -466,7 +463,7 @@
 
     <div class="alert alert-success alert-dismissable fade in text-center" id="alert" style="display:none">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-      收藏修改成功
+      收藏成功
     </div>
 
     <script src="js/jquery-1.10.2.min.js"></script>

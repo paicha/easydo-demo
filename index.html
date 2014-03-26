@@ -218,121 +218,8 @@
               </div>
             </div>
 
-          <div class="table-responsive">
-            <table class="table table-hover">
-              <thead>
-                <tr>
-                  <th><input type="checkbox"></th>
-                  <th>标题</th>
-                  <th>管理人</th>
-                  <th>标签</th>
-                  <th>大小</th>
-                  <th>修改时间<span class="caret"></span></th>
-                  <th> <a href="#"><span class="icon-cog"></span></a></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td><span class="icon-folder-close-alt"></span> Daily</td>
-                  <td>赖嘉伟</td>
-                  <td></td>
-                  <td>12项</td>
-                  <td>01/04/2012</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td><span class="icon-folder-close-alt"></span> Knowledge</td>
-                  <td>赖嘉伟</td>
-                  <td></td>
-                  <td>123项</td>
-                  <td>01/04/2012</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td><span class="icon-folder-close-alt"></span> temporary</td>
-                  <td>赖嘉伟</td>
-                  <td>测试</td>
-                  <td>444项</td>
-                  <td>01/04/2012</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td><span class="icon-file-alt"></span> 文件1.txt</td>
-                  <td>赖嘉伟</td>
-                  <td></td>
-                  <td>123KB</td>
-                  <td>01/04/2012</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td><span class="icon-file-alt"></span> 文件2.pptx</td>
-                  <td>赖嘉伟</td>
-                  <td></td>
-                  <td>123KB</td>
-                  <td>01/04/2012</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td><span class="icon-file-alt"></span> 文件1.txt</td>
-                  <td>赖嘉伟</td>
-                  <td></td>
-                  <td>123KB</td>
-                  <td>01/04/2012</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td><span class="icon-file-alt"></span> 文件2.pptx</td>
-                  <td>赖嘉伟</td>
-                  <td></td>
-                  <td>123KB</td>
-                  <td>01/04/2012</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td><span class="icon-file-alt"></span> 文件1.txt</td>
-                  <td>赖嘉伟</td>
-                  <td></td>
-                  <td>123KB</td>
-                  <td>01/04/2012</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td><span class="icon-file-alt"></span> 文件2.pptx</td>
-                  <td>赖嘉伟</td>
-                  <td></td>
-                  <td>123KB</td>
-                  <td>01/04/2012</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td><span class="icon-file-alt"></span> 文件1.txt</td>
-                  <td>赖嘉伟</td>
-                  <td></td>
-                  <td>123KB</td>
-                  <td>01/04/2012</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td><span class="icon-file-alt"></span> 文件2.pptx</td>
-                  <td>赖嘉伟</td>
-                  <td></td>
-                  <td>123KB</td>
-                  <td>01/04/2012</td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="table-responsive FileList">
+            
           </div>
           <ul class="pagination pull-right">
             <li><a href="#">&laquo;</a></li>
@@ -352,7 +239,7 @@
               <span class="icon-plus"></span> 文件 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="#">上传文件</a></li>
+              <li><a href="#" id="Uploadile">上传文件</a></li>
               <li><a href="#">新建文件</a></li>
               <li><a href="#">快捷方式</a></li>
             </ul>
@@ -487,8 +374,80 @@
       收藏成功
     </div>
 
+    <script type="text/template" id="file-list-template">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th><input type="checkbox"></th>
+            <th>标题</th>
+            <th>管理人</th>
+            <th>标签</th>
+            <th>大小</th>
+            <th>修改时间<span class="caret"></span></th>
+            <th> <a href="#"><span class="icon-cog"></span></a></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% _.each(file, function(file_list){ %>
+            <tr>
+            <td><input type="checkbox"></td>
+            <td><span class="icon-folder-close-alt"></span> <%= file_list.get('title') %></td>
+            <td><%= file_list.get('admin') %></td>
+            <td><%= file_list.get('tag') %></td>
+            <td><%= file_list.get('size') %>项</td>
+            <td><%= file_list.get('update') %></td>
+            <td><a href="#edit/<%= file_list.title %>" class="btn">编辑</a></td>
+          </tr>
+          <%});%>
+          
+        </tbody>
+        </table>
+        <a href="#" id="UploadFile" data-toggle="modal" data-target="#UploadModal">上传文件</a>
+    </script>
+
+    <script type="text/template" id="edit-file-template">
+        <div class="modal fade" id="UploadModal" tabindex="-1" role="dialog" aria-labelledby="UploadLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">标题</h4>
+              </div>
+              <div class="modal-body">
+                
+                  <form class="edit-file-form">
+                  <label>文件名</label>
+                  <input type="text" name="title" value="<%= file ? file.get('title') : '' %>" />
+                  <label>类型</label>
+                  <input type="text" name="admin" value="<%= file ? file.get('admin') : '' %>"/>
+                  <label>数量</label>
+                  <input type="text" name="tag" value="<%= file ? file.get('tag') : '' %>"/>
+                  <input type="text" name="size" value="<%= file ? file.get('size') : '' %>"/>
+                  <input type="text" name="update" value="<%= file ? file.get('update') : '' %>"/>
+                  <button type="submit" class="btn"><%= file ? 'update' : 'create' %></button>
+                   <% if(file) { %>
+                    <input type="hidden" name="id" value="<%= file.id %>" />
+                    <button type="button" class="btn btn-danger delete">Delete</button>
+                    <% }; %>
+                  </form>  
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">发布</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </script>
+    
+
     <script src="js/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/underscore.js/1.6.0/underscore-min.js"></script>
+    <script src="http://cdn.bootcss.com/backbone.js/1.1.2/backbone-min.js"></script>
+    <script src="js/backbone.localStorage.js"></script>
+    <script src="js/form.js"></script>
     <script>
       function displayAlert()
       {

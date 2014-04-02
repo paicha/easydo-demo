@@ -34,16 +34,16 @@ var File = Backbone.Model.extend({
 
 //定义filelist view
 var FileList = Backbone.View.extend({
-    el: '.FileList', //选取元素
+    el: '#box', //选取元素
     render: function() {
         var that = this; //代替this
         var file = new files(); //初始化collection
         file.fetch({
             success: function(file) {
                 var template = _.template($('#file-list-template').html(), {file: file.models});
-                that.$el.html(template)
+                that.$el.html(template);
             }
-        })
+        });
     },
 
     events: {
@@ -73,7 +73,7 @@ var EditFile = Backbone.View.extend({
                     }); //渲染模板
                     that.$el.html(template);
                 }
-            })
+            });
         } else {
             var template = _.template($('#edit-file-template').html(), {
                 file: null
@@ -91,7 +91,7 @@ var EditFile = Backbone.View.extend({
                     trigger: true
                 });
             }
-        })
+        });
         return false;
     },
     deleteFile: function(ev) {
@@ -101,10 +101,12 @@ var EditFile = Backbone.View.extend({
                     trigger: true
                 });
             }
-        })
+        });
         return false;
     }
-})
+});
+
+
 
 //定义路由
 var Router = Backbone.Router.extend({

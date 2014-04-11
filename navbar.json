@@ -1,0 +1,47 @@
+[
+  {
+    "title": "工作台",
+    "href": "#desks",
+    "appname": "DesksApp"
+  },
+  {
+    "title": "客户管理",
+    "href": "#sales",
+    "appname": "SalesApp"
+  },
+  {
+    "title": "项目中心",
+    "href": "#projects",
+    "appname": "ProjectsApp"
+  },
+  {
+    "title": "444",
+    "href": "#444",
+    "appname": "444"
+  },
+  {
+    "title": "555",
+    "href": "#555",
+    "appname": "555"
+  },
+  {
+    "title": "666",
+    "href": "#666",
+    "appname": "666"
+  },
+  {
+    "title": "777",
+    "href": "#777",
+    "appname": "777"
+  },
+  {
+    "title": "888",
+    "href": "#888",
+    "appname": "888"
+  },
+  {
+    "title": "999",
+    "href": "#999",
+    "appname": "999"
+  }
+]

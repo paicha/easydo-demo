@@ -46,8 +46,8 @@ body {
   min-width: 200px;
 }
 .dropdown-menu td {
-  padding: 0px!important;
-  border-top: 0px solid #dddddd!important;
+  padding: 0!important;
+  border-top: 0 solid #dddddd!important;
 }
 .dropdown-menu td a {
   display: block;
@@ -66,7 +66,12 @@ body {
 
 /* fix 主题宽度 */
 .container-fluid {
-  padding: 0px 15px;
+  padding: 0 15px;
+}
+
+/* 页面内容 */
+#app-content {
+  margin-top: 20px;
 }
 
 /* 未读标记 */
@@ -93,12 +98,8 @@ body {
 }
 
 /* 页面导航 */
-.placeholder {
-  padding-top: 20px;
-}
 .page-nav {
   background-color: #F5F5F5;
-  margin-bottom: 20px;
   border-bottom: 1px solid #E1E1E1;
 }
 .page-nav h4 {
@@ -108,7 +109,7 @@ body {
 /* 默认状态 */
 .page-nav a {
   color: #999999;
-  padding: 11px 0px!important;
+  padding: 11px 0!important;
 }
 /* 激活状态 */
 .page-nav .active a {
@@ -116,7 +117,7 @@ body {
   border-bottom-color: #2299bb;
   background-color: #F5F5F5!important;
   color: #333!important;
-  border-radius: 0px!important;
+  border-radius: 0!important;
 }
 /* 光标聚焦与经过 */
 .page-nav li>a:hover, .page-nav li>a:focus {
@@ -124,7 +125,7 @@ body {
   border-bottom-color: #2299bb;
   background-color: #F5F5F5!important;
   color: #333!important;
-  border-radius: 0px!important;
+  border-radius: 0!important;
 } 
 .page-nav li {
   margin:  0 15px!important;
@@ -179,13 +180,13 @@ body {
 
 /* 手风琴面板 */
 .panel-collapse a {
-  border-radius: 0px!important;
+  border-radius: 0!important;
   color: #777;
 }
 
 /* 表格 */
 .table {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 /* 分页按钮 */
@@ -209,8 +210,8 @@ body {
 
 /* 移动端导航调整 */
 .navbar-form {
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 0;
+  margin-right: 0;
 }
 .navbar-collapse {
   max-height: 500px;

@@ -7,25 +7,28 @@ define([
   'apps/navbar/leftview',
   'apps/navbar/rightview',
   'apps/navbar/collection'
-], function(_, Marionette, Backbone, App, LayoutView, LeftView, RightView, Collection) {
+], function(_, Marionette, Backbone, App, LayoutView, LeftView, RightView, NavCollection) {
 
   var NavbarController = Marionette.Controller.extend({
 
-    selected_app: '',
-    navbardata: new Collection(),
-    layoutview: new LayoutView(),
-    rightview: new RightView(),
-    leftview: new LeftView({
-    }),
-
     initialize: function() {
       App.vent.on("app:started", this._setCurrentApp, this);
+      
+      this.layoutview = new LayoutView();
+      this.rightview = new RightView();
+
       var that = this;
+      this.navbardata = new NavCollection();
       this.navbardata.fetch({
         success: (function() {
           that.leftview.setCurrent(that.selected_app);
         })
       });
+
+      this.leftview = new LeftView({
+        collection: this.navbardata
+      });
+
     },
 
     onClose: function() {
@@ -39,10 +42,9 @@ define([
     },
 
     _setCurrentApp: function(appName) {
-      this.selected_app = appName; // 第一次可能导航数据还未加载，临时保存下
+      this.selected_app = appName; // 首次加载由于异步操作，导航数据还未加载渲染，临时保存appName
       this.leftview.setCurrent(appName);
     },
-
 
   });
 

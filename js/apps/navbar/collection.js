@@ -1,13 +1,12 @@
 define([
-  'underscore',
-  'apps/navbar/model',
-  'app'
-], function(_, NavModel, app) {
+  'app',
+  'apps/navbar/model'
+], function(app, NavModel) {
 
   return Backbone.Collection.extend({
 
     model: NavModel,
-
+    
     url: '/navbar.json',
 
     parse: function(resp, options) {

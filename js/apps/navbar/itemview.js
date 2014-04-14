@@ -1,17 +1,15 @@
 define([
-    'underscore',
-    'marionette',
-    'text!apps/navbar/tmpl/item.html'
-  ],
+  'underscore',
+  'marionette',
+  'text!apps/navbar/tmpl/item.html'
+], function(_, Marionette, ItemTemplate) {
 
-  function(_, Marionette, ItemTemplate) {
+  return Marionette.ItemView.extend({
 
-    return Marionette.ItemView.extend({
+    tagName: 'li',
 
-      tagName: 'li',
-
-      template: _.template(ItemTemplate),
-
-    });
+    template: _.template(ItemTemplate),
 
   });
+
+});

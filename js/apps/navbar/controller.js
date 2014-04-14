@@ -13,7 +13,7 @@ define([
 
     initialize: function() {
       App.vent.on("app:started", this._setCurrentApp, this);
-      
+
       this.layoutview = new LayoutView();
       this.rightview = new RightView();
 
@@ -28,7 +28,6 @@ define([
       this.leftview = new LeftView({
         collection: this.navbardata
       });
-
     },
 
     onClose: function() {

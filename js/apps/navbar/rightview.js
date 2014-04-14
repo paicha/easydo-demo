@@ -9,6 +9,7 @@ define([
 
     template: _.template(RightTemplate),
 
+    
     events:  {
       'click #nav-edit'   : 'nav-edit',
     },

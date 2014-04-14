@@ -19,7 +19,7 @@ define([
       } else {
         collectionView.$(".dropdown-menu").append(itemView.el);
       }
-      
+      // 当出现第4个导航时，显示下拉导航
       if (index == 3) {
         collectionView.$(".dropdown").removeClass("hidden");
       }

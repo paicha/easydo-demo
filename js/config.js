@@ -55,7 +55,8 @@ require([
   'apps/navbar/app',
   'apps/desks/app',
   'apps/sales/app',
-], function(Backbone, _, bootstrap, App, NavbarApp, DesksApp, SalesApp) {
+  'apps/account/app'
+], function(Backbone, _, bootstrap, App, NavbarApp, DesksApp, SalesApp, AccountApp) {
 
   require(['compute']);
   App.addInitializer(function() {

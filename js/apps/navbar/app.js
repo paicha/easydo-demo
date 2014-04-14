@@ -7,7 +7,7 @@ define([
   var NavBarApp = App.module("NavBarApp");
   NavBarApp.controller = new Controller();
 
-  NavBarApp.on("start", function () {
+  NavBarApp.on("start", function() {
     NavBarApp.controller.showNavbar();
   });
 

@@ -6,6 +6,8 @@ define([
 
   return Marionette.CollectionView.extend({
 
+    className: "col-sm-2 navtree",
+
     itemView: NavNodeView
 
   });

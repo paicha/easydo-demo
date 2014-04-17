@@ -221,3 +221,13 @@ body {
 [class^="icon-"] {
   padding-right: 4px;
 }
+
+/* 导航树 */
+.navtree ul, li {
+  list-style: none;
+}
+
+.navtree ul {
+  padding-left: 10px;
+margin-left: 10px;
+}

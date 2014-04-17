@@ -2,12 +2,12 @@ define([
   'underscore',
   'marionette',
   'app',
-  'text!apps/account/orgtree/tmpl/item.html',
+  'text!apps/account/orgtree/tmpl/left_item.html',
 ], function(_, Marionette, App, ItemTemplates) {
 
   return Marionette.CompositeView.extend({
 
-    template: ItemTemplates,
+    template: _.template(ItemTemplates),
 
     tagName: "ul",
 
@@ -22,11 +22,12 @@ define([
     },
 
     triggers: {
-      'click .do-something': 'dosomething'
+      'click .icon-plus': 'dosomething',
+      'click .icon-minus': 'dosomething'
     },
 
 
-    appendHtml: function(collectionView, itemView) {
+    appendHtml: function(collectionView, itemView, index) {
       // ensure we nest the child list inside of 
       // the current list item
       collectionView.$("li:first").append(itemView.el);

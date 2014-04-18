@@ -16,14 +16,14 @@ define([
       // so that we can render the collection as children
       // of this parent node
       this.collection = this.model.nodes;
-      this.on('dosomething', function(args){
-        App.vent.trigger('something', args);
+      this.on('click:icon', function(args){
+        App.vent.trigger('click:icon', args);
       });
     },
 
     triggers: {
-      'click .icon-plus': 'dosomething',
-      'click .icon-minus': 'dosomething'
+      'click .icon-plus': 'click:icon',
+      'click .icon-minus': 'click:icon'
     },
 
 

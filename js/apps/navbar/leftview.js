@@ -3,7 +3,7 @@ define([
   'marionette',
   'text!apps/navbar/tmpl/left.html',
   'text!apps/navbar/tmpl/item.html',
-  'apps/navbar/collection',
+  'apps/navbar/navcollection',
   'apps/navbar/itemview'
 ], function(_, Marionette, LeftTemplate, ItemTemplate, Collection, Itemview) {
 

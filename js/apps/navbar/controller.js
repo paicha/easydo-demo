@@ -6,7 +6,7 @@ define([
   'apps/navbar/layoutview',
   'apps/navbar/leftview',
   'apps/navbar/rightview',
-  'apps/navbar/collection'
+  'apps/navbar/navcollection'
 ], function(_, Marionette, Backbone, App, LayoutView, LeftView, RightView, NavCollection) {
 
   var NavbarController = Marionette.Controller.extend({

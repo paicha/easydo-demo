@@ -55,7 +55,7 @@ require([
   'apps/navbar/app',
   'apps/desks/app',
   'apps/sales/app',
-  'apps/account/app'
+  'apps/account/app',
 ], function(Backbone, _, bootstrap, App, NavbarApp, DesksApp, SalesApp, AccountApp) {
 
   require(['compute']);

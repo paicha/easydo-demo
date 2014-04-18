@@ -1,8 +1,10 @@
 define([
   "app",
   "marionette",
-  "apps/account/controller",
-], function(App, Marionette, Controller) {
+  'apps/account/tabsview',
+  'apps/account/userlist/app',
+  'apps/account/orgtree/app'
+], function(App, Marionette, TabsView, UserlistApp, OrgtreeApp) {
 
   var AccountApp = App.module("AccountApp", {
     startWithParent: false,
@@ -16,22 +18,16 @@ define([
     App.pagetabs.reset();
   });
 
-  var AccountRouter = Marionette.AppRouter.extend({
-
-    before: function() {
-      App.startSubApp("AccountApp", {});
+  var Controller = {
+    showAccountTabs: function() {
+      this.tabsview = new TabsView();
+      App.pagetabs.show(this.tabsview);
+      App.vent.on("app:started", this._setCurrentApp, this);
     },
-
-    controller: Controller,
-
-    appRoutes: {
-      "account-orgtree": "OrgtreeApp"
+    _setCurrentApp: function(appName) {
+      this.tabsview.setCurrent(appName);
     }
-  });
-
-  App.addInitializer(function() {
-    new AccountRouter();
-  });
+  };
 
   return AccountApp;
 });

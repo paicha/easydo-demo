@@ -1,8 +1,9 @@
 define([
   "app",
+  "apps/account/app",
   "marionette",
   "apps/account/orgtree/controller",
-], function(App, Marionette, Controller) {
+], function(App, AccountApp, Marionette, Controller) {
 
   var OrgtreeApp = App.module("OrgtreeApp", {
     startWithParent: false
@@ -13,11 +14,15 @@ define([
     Controller.OrgtreeApp();
   });
 
+  OrgtreeApp.on("stop", function() {
+    App.pageleft.reset();
+  });
+
   var OrgtreeRouter = Marionette.AppRouter.extend({
 
     before: function() {
       App.AccountApp.start(); // tab导航
-      App.startSubApp("OrgtreeApp", {}); // 目录树
+      App.AccountApp.startSubApps("OrgtreeApp",{}); // 目录树
     },
 
     controller: Controller,

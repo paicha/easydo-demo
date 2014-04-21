@@ -26,6 +26,7 @@ define([
     },
 
     setCurrent: function(appName) {
+      $('#navbar li').removeClass('active');
       $('#' + appName).tab('show');
     }
 

@@ -11,6 +11,7 @@ define([
   });
 
   AccountApp.on("start", function() {
+    App.startSubApp("AccountApp", {});
     Controller.showAccountTabs();
   });
 
@@ -22,11 +23,27 @@ define([
     showAccountTabs: function() {
       this.tabsview = new TabsView();
       App.pagetabs.show(this.tabsview);
-      App.vent.on("app:started", this._setCurrentApp, this);
+      AccountApp.on("app:account:started", this._setCurrentApp, this);
     },
     _setCurrentApp: function(appName) {
       this.tabsview.setCurrent(appName);
     }
+  };
+
+  AccountApp.startSubApps = function(appName, args) {
+  var currentApp = App.module(appName);
+    if (AccountApp.currentApp === currentApp) {
+      return;
+    }
+
+    if (AccountApp.currentApp) {
+      AccountApp.currentApp.stop();
+    }
+
+    AccountApp.currentApp = currentApp;
+    currentApp.start(args);
+    //App.module(appName).start();
+    AccountApp.trigger("app:account:started", appName);
   };
 
   return AccountApp;

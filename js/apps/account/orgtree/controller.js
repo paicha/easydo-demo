@@ -46,11 +46,11 @@ define([
       var clickicon = function(args) {
         var el = args.view.el.children;
         // 得到子节点长度
-        ul = $(el).find('ul').length;
+        var ul = $(el).find('ul').length;
         // 如果有子节点
         if (ul) {
           // 获取子节点
-          children = $(el).find(' > ul > li');
+          var children = $(el).find(' > ul > li');
           // 如果子节点是可视状态
           if (children.is(":visible")) {
             // 隐藏
@@ -65,7 +65,7 @@ define([
           }
         } else { // 如果没有子节点
           // 加载子节点
-          subdataId = args.model.get("id");
+          var subdataId = args.model.get("id");
           //subnodes = new TreeNode(subdata(subdataid));
           args.collection.add(subdata(subdataId));
           // args.collection.add(subnodes1, subnodes2]);
@@ -81,12 +81,12 @@ define([
     },
 
     ceo: function(){
-      contentview = new CeoContentView();
+      var contentview = new CeoContentView();
       App.pagecontent.show(contentview);
     },
 
     treeRoot: function(){
-      contentview = new RootContentView();
+      var contentview = new RootContentView();
       App.pagecontent.show(contentview);
     }
 

@@ -29,8 +29,8 @@ define([
   });
 
   App.addInitializer(function() {
-    navController = new NavController();
-    navController.showNavbar();
+    var navController = new NavController();
+    navController.showNavbar(App.navbar);
     App.vent.on("app:started", navController.setCurrentApp, navController);
   });
 

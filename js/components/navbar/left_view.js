@@ -1,8 +1,8 @@
 define([
   'underscore',
   'marionette',
-  'text!apps/navbar/tmpl/left.html',
-  'apps/navbar/item_view'
+  'text!components/navbar/tmpl/left.html',
+  'components/navbar/item_view'
 ], function(_, Marionette, LeftTemplate, Itemview) {
 
   return Marionette.CompositeView.extend({

@@ -52,16 +52,12 @@ require([
   'underscore',
   'bootstrap',
   'app',
-  'apps/navbar/app',
   'apps/desks/app',
   'apps/sales/app',
   'apps/account/app',
-], function(Backbone, _, bootstrap, App, NavbarApp, DesksApp, SalesApp, AccountApp) {
+], function(Backbone, _, bootstrap, App, DesksApp, SalesApp, AccountApp) {
 
   require(['compute']);
-  App.addInitializer(function() {
-    NavbarApp.start();
-  });
 
   App.start();
 });

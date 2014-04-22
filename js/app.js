@@ -31,6 +31,7 @@ define([
   App.addInitializer(function() {
     navController = new NavController();
     navController.showNavbar();
+    App.vent.on("app:started", navController.setCurrentApp, navController);
   });
 
   App.on("initialize:after", function() {

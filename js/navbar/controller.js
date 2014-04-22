@@ -29,8 +29,6 @@ define([
       App.navbar.show(this.layoutview);
       this.layoutview.left.show(this.leftview);
       this.layoutview.right.show(this.rightview);
-
-      App.vent.on("app:started", this.setCurrentApp, this);
     },
 
     setCurrentApp: function(appName) {

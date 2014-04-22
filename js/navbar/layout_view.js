@@ -1,7 +1,7 @@
 define([
   'underscore',
   'marionette',
-  'text!components/navbar/tmpl/layout.html'
+  'text!navbar/tmpl/layout.html'
 ], function(_, Marionette, LayoutTemplate) {
 
   return Marionette.Layout.extend({

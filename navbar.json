@@ -1,12 +1,12 @@
 [
   {
     "title": "工作台",
-    "href": "#desks",
+    "href": "#desks-disk",
     "appname": "DesksApp"
   },
   {
     "title": "客户管理",
-    "href": "#sales",
+    "href": "#sales-case",
     "appname": "SalesApp"
   },
   {

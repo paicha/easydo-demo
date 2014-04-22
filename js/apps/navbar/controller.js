@@ -3,17 +3,15 @@ define([
   'marionette',
   'backbone',
   'app',
-  'apps/navbar/layoutview',
-  'apps/navbar/leftview',
-  'apps/navbar/rightview',
-  'apps/navbar/navcollection'
+  'apps/navbar/layout_view',
+  'apps/navbar/left_view',
+  'apps/navbar/right_view',
+  'apps/navbar/nav_collection'
 ], function(_, Marionette, Backbone, App, LayoutView, LeftView, RightView, NavCollection) {
 
   var NavbarController = Marionette.Controller.extend({
 
     initialize: function() {
-      App.vent.on("app:started", this._setCurrentApp, this);
-
       this.layoutview = new LayoutView();
       this.rightview = new RightView();
 
@@ -21,17 +19,14 @@ define([
       this.navbardata = new NavCollection();
       this.navbardata.fetch({
         success: (function() {
-          that.leftview.setCurrent(that.selected_app);
+          that.leftview.setCurrent(that.selected_app); // 渲染导航之后，高亮当前导航
         })
       });
-
       this.leftview = new LeftView({
         collection: this.navbardata
       });
-    },
 
-    onClose: function() {
-      App.vent.off("app:started", this._setCurrentApp, this);
+      App.vent.on("app:started", this._setCurrentApp, this);
     },
 
     showNavbar: function() {

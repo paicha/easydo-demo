@@ -1,20 +1,18 @@
 define([
   'underscore',
   'marionette',
-  'apps/desks/disk/templates'
-],
-
-function (_, Marionette, templates) {
+  'text!apps/desks/disk/tmpl/item.html'
+], function(_, Marionette, ItemTemplate) {
 
   return Marionette.ItemView.extend({
 
     tagName: 'tr',
 
-    template: _.template(templates.item),
+    template: _.template(ItemTemplate),
 
-    triggers:  {
+    triggers: {
       // UserController is listening
-      'click .delete' : 'file:delete'
+      'click .delete': 'file:delete'
     },
 
     initialize: function() {
@@ -23,5 +21,5 @@ function (_, Marionette, templates) {
     }
 
   });
-  
+
 });

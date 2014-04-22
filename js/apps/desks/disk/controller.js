@@ -3,30 +3,22 @@ define([
   'marionette',
   'backbone',
   'app',
-  'apps/desks/disk/contentlistview',
-  'apps/desks/disk/rightview',
-  'apps/desks/disk/filemodel',
-  'apps/desks/disk/uploadview',
-  'apps/desks/disk/filecollection',
-  'apps/desks/todo/contentview'
-],
+  'apps/desks/disk/content_list_view',
+  'apps/desks/disk/right_view',
+  'apps/desks/disk/file_model',
+  'apps/desks/disk/upload_view',
+  'apps/desks/disk/file_collection',
+], function(_, Marionette, Backbone, App, ContentListView, RightView, FileModel, UploadView, FileCollection) {
 
-function(_, Marionette, Backbone, App, ContentListView, RightView, FileModel, UploadView, FileCollection, todoContentView) {
-
-  var DesksController = {
-
-    ShowDesks: function(){
-
-    },
+  var DiskController = {
 
     DiskApp: function() {
 
-      $('.nav-pills a[href="#desks-disk"]').tab('show');
-
-      if (! this.files) {
+      if (!this.files) {
         this.files = new FileCollection();
-
-        this.files.fetch({reset: true});
+        this.files.fetch({
+          reset: true
+        });
       }
 
       var contentlistview = new ContentListView({
@@ -39,14 +31,6 @@ function(_, Marionette, Backbone, App, ContentListView, RightView, FileModel, Up
 
       rightview.on('file:upload', this.uploadFile, this);
       rightview.on('file:createFolder', this.createFolder, this);
-    },
-
-    TodoApp: function() {
-      $('.nav-pills a[href="#desks-todo"]').tab('show');
-      App.pageright.reset();
-      var todocontentview = new todoContentView({
-      });
-      App.pagecontent.show(todocontentview);
     },
 
     uploadFile: function(args) {
@@ -79,21 +63,21 @@ function(_, Marionette, Backbone, App, ContentListView, RightView, FileModel, Up
       App.modal.show(uploadview);
     },
 
-    saveFile: function (args) {
-      var self   = this;
-      var view   = args.view;
-      var model  = args.model;
-      var title  = view.$('input#title').val();
+    saveFile: function(args) {
+      var self = this;
+      var view = args.view;
+      var model = args.model;
+      var title = view.$('input#title').val();
       var admin = view.$('input#admin').val();
       var tag = view.$('input#tag').val();
-      var size  = view.$('input#size').val();
+      var size = view.$('input#size').val();
       var update = view.$('input#update').val();
 
       model.save({
-        title : title,
-        admin : admin,
-        tag   : tag,
-        size  : size,
+        title: title,
+        admin: admin,
+        tag: tag,
+        size: size,
         update: update
       }, {
         success: function(model, response, options) {
@@ -104,10 +88,10 @@ function(_, Marionette, Backbone, App, ContentListView, RightView, FileModel, Up
           console.log('User save server ERROR');
         }
       });
-      
+
     }
   };
 
-  return DesksController;
+  return DiskController;
 
 });

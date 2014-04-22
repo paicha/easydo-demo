@@ -1,18 +1,17 @@
 define([
   'underscore',
   'marionette',
-  'apps/desks/templates',
-],
-
-function (_, Marionette, templates) {
+  'text!apps/desks/tmpl/left.html',
+], function(_, Marionette, LeftTemplates) {
 
   return Marionette.ItemView.extend({
 
     className: "col-sm-2",
 
-    template: _.template(templates.left),
+    template: _.template(LeftTemplates),
 
     setCurrent: function(appName) {
+      appName = appName.replace(".", "-");
       $('#' + appName).tab('show');
     }
 

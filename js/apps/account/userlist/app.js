@@ -4,21 +4,21 @@ define([
   "apps/account/userlist/controller",
 ], function(App, Marionette, Controller) {
 
-  var userlistApp = App.module("UserlistApp", {
+  var UserlistApp = App.module("AccountApp.UserlistApp", {
     startWithParent: false,
   });
 
   var UserlistRouter = Marionette.AppRouter.extend({
 
     before: function() {
-      App.AccountApp.start(); // tabs导航
-      App.AccountApp.startSubApps("UserlistApp", {});
+      App.startSubApp("AccountApp", {});
+      App.AccountApp.startSubApps("AccountApp.UserlistApp");
     },
 
     controller: Controller,
 
     appRoutes: {
-      "account-userlist": "userlistApp"
+      "account-userlist": "UserlistApp"
     }
   });
 
@@ -26,5 +26,5 @@ define([
     new UserlistRouter();
   });
 
-  return userlistApp;
+  return UserlistApp;
 });

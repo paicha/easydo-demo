@@ -1,17 +1,16 @@
 define([
   "app",
-  "apps/account/app",
   "marionette",
   "apps/account/orgtree/controller",
-], function(App, AccountApp, Marionette, Controller) {
+], function(App, Marionette, Controller) {
 
-  var OrgtreeApp = App.module("OrgtreeApp", {
+  var OrgtreeApp = App.module("AccountApp.OrgtreeApp", {
     startWithParent: false
   });
 
-  // 目录树是公共的部分，启动的时候先加载
   OrgtreeApp.on("start", function() {
-    Controller.OrgtreeApp();
+    var treeView = Controller.orgTreeApp();
+    App.pageleft.show(treeView);
   });
 
   OrgtreeApp.on("stop", function() {
@@ -21,15 +20,15 @@ define([
   var OrgtreeRouter = Marionette.AppRouter.extend({
 
     before: function() {
-      App.AccountApp.start(); // tab导航
-      App.AccountApp.startSubApps("OrgtreeApp",{}); // 目录树
+      App.startSubApp("AccountApp", {});
+      App.AccountApp.startSubApps("AccountApp.OrgtreeApp");
     },
 
     controller: Controller,
 
     appRoutes: {
-      "account-orgtree": "TreeRoot", //组织结构下的页面
-      "account-orgtree-ceo": "ceo" //组织结构下的页面
+      "account-orgtree": "treeRoot",
+      "account-orgtree-ceo": "ceo"
     }
   });
 

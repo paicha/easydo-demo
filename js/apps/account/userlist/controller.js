@@ -2,18 +2,18 @@ define([
   'underscore',
   'marionette',
   'app',
-  'apps/account/userlist/contentview'
+  'apps/account/userlist/content_view'
 ], function(_, Marionette, App, ContentView) {
 
-  var UserlistController = {
+  var Controller = {
 
-    userlistApp: function() {
+    UserlistApp: function() {
       contentview = new ContentView();
       App.pagecontent.show(contentview);
     }
 
   };
 
-  return UserlistController;
+  return Controller;
 
 });

@@ -1,7 +1,7 @@
 define([
   "app",
   "marionette",
-  'apps/account/tabsview',
+  'apps/account/tabs_view',
   'apps/account/userlist/app',
   'apps/account/orgtree/app'
 ], function(App, Marionette, TabsView, UserlistApp, OrgtreeApp) {
@@ -11,15 +11,15 @@ define([
   });
 
   AccountApp.on("start", function() {
-    App.startSubApp("AccountApp", {});
-    Controller.showAccountTabs();
+    controller.showAccountTabs();
   });
 
   AccountApp.on("stop", function() {
     App.pagetabs.reset();
+    AccountApp.currentApp = ""; // 清空记录的当前应用
   });
 
-  var Controller = {
+  var controller = {
     showAccountTabs: function() {
       this.tabsview = new TabsView();
       App.pagetabs.show(this.tabsview);
@@ -30,8 +30,8 @@ define([
     }
   };
 
-  AccountApp.startSubApps = function(appName, args) {
-  var currentApp = App.module(appName);
+  AccountApp.startSubApps = function(appName) {
+    var currentApp = App.module(appName);
     if (AccountApp.currentApp === currentApp) {
       return;
     }
@@ -41,8 +41,7 @@ define([
     }
 
     AccountApp.currentApp = currentApp;
-    currentApp.start(args);
-    //App.module(appName).start();
+    currentApp.start();
     AccountApp.trigger("app:account:started", appName);
   };
 

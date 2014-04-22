@@ -3,16 +3,17 @@ define([
   'marionette',
   'backbone',
   'app',
-  'apps/account/orgtree/contentview',
-  'apps/account/orgtree/ceocontentview',
+  'apps/account/orgtree/content_view',
+  'apps/account/orgtree/ceo_content_view',
+  'apps/account/orgtree/root_content_view',
   'apps/account/orgtree/tree_node_collection',
   'apps/account/orgtree/nav_root_view',
   'apps/account/orgtree/tree_node_model'
-], function(_, Marionette, Backbone, App, ContentView, CeoContentView, TreeNodeCollection, NavRootView, TreeNode) {
+], function(_, Marionette, Backbone, App, ContentView, CeoContentView, RootContentView, TreeNodeCollection, NavRootView, TreeNode) {
 
-  var AccountController = {
+  var Controller = {
 
-    OrgtreeApp: function() {
+    orgTreeApp: function() {
 
       this.tree = new TreeNodeCollection();
       this.tree.url = "/orgtree.json";
@@ -74,23 +75,23 @@ define([
           $(el).find('ul .icon-home').addClass('icon-user').removeClass('icon-home');
         }
       };
-
       App.vent.on("click:icon", clickicon);
-      App.pageleft.show(treeView);
-    },
-
-    TreeRoot: function(){
-      contentview = new ContentView();
-      App.pagecontent.show(contentview);
+      
+      return treeView;
     },
 
     ceo: function(){
-      ceo_contentview = new CeoContentView();
-      App.pagecontent.show(ceo_contentview);
+      contentview = new CeoContentView();
+      App.pagecontent.show(contentview);
+    },
+
+    treeRoot: function(){
+      contentview = new RootContentView();
+      App.pagecontent.show(contentview);
     }
 
   };
 
-  return AccountController;
+  return Controller;
 
 });

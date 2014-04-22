@@ -1,7 +1,7 @@
 define([
   'underscore',
   'marionette',
-  'text!apps/desks/tmpl/left.html',
+  'text!apps/desks/page_nav/tmpl/left.html',
 ], function(_, Marionette, LeftTemplates) {
 
   return Marionette.ItemView.extend({

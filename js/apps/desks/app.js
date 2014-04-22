@@ -1,17 +1,19 @@
 define([
   "app",
   "marionette",
-  "apps/desks/left_view",
+  "apps/desks/page_nav/controller",
   "apps/desks/disk/app",
   "apps/desks/todo/app"
-], function(App, Marionette, LeftView, DiskApp, TodoApp) {
+], function(App, Marionette, Controller, DiskApp, TodoApp) {
 
   var DesksApp = App.module("DesksApp", {
     startWithParent: false,
   });
 
   DesksApp.on("start", function() {
-    controller.showDesksApp();
+    var controller = new Controller();
+    controller.showPageNav(App.pageleft);
+    DesksApp.on("app:desks:started", controller.setCurrentApp, controller);
   });
 
   DesksApp.on("stop", function() {
@@ -20,17 +22,6 @@ define([
     App.pageright.reset();
     DesksApp.currentApp = ""; // 清空记录的当前应用
   });
-
-  var controller = {
-    showDesksApp: function() {
-      this.leftview = new LeftView();
-      App.pageleft.show(this.leftview);
-      DesksApp.on("app:desks:started", this._setCurrentApp, this);
-    },
-    _setCurrentApp: function(appName) {
-      this.leftview.setCurrent(appName);
-    }
-  };
 
   DesksApp.startSubApps = function(appName) {
     var currentApp = App.module(appName);

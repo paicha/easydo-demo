@@ -1,33 +1,24 @@
 define([
   "app",
   "marionette",
-  'apps/sales/tabs_view',
+  'apps/sales/tabs/controller',
   'apps/sales/case/app'
-], function(App, Marionette, TabsView, CaseApp) {
+], function(App, Marionette, Controller, CaseApp) {
 
   var SalesApp = App.module("SalesApp", {
     startWithParent: false,
   });
 
   SalesApp.on("start", function() {
-    controller.showSalesTabs();
+    var controller = new Controller();
+    controller.showTabs(App.pagetabs);
+    SalesApp.on("app:desks:started", controller.setCurrentApp, controller);
   });
 
   SalesApp.on("stop", function() {
     App.pagetabs.reset();
     SalesApp.currentApp = ""; // 清空记录的当前应用
   });
-
-  var controller = {
-    showSalesTabs: function() {
-      this.tabsview = new TabsView();
-      App.pagetabs.show(this.tabsview);
-      SalesApp.on("app:desks:started", this._setCurrentApp, this);
-    },
-    _setCurrentApp: function(appName) {
-      this.tabsview.setCurrent(appName);
-    }
-  };
 
   SalesApp.startSubApps = function(appName) {
     var currentApp = App.module(appName);

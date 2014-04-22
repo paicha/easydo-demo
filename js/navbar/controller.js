@@ -10,7 +10,7 @@ define([
 
   var Controller = Marionette.Controller.extend({
 
-    showNavbar: function(Regions) {
+    showNavbar: function(regions) {
       this.layoutview = new LayoutView();
       this.rightview = new RightView();
 
@@ -25,7 +25,7 @@ define([
         collection: this.navbardata
       });
 
-      Regions.show(this.layoutview);
+      regions.show(this.layoutview);
       this.layoutview.left.show(this.leftview);
       this.layoutview.right.show(this.rightview);
     },

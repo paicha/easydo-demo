@@ -1,12 +1,12 @@
 define([
   'underscore',
   'marionette',
-  'text!apps/sales/tmpl/tabs.html'
-], function(_, Marionette, TabsTemplate) {
+  'text!apps/account/tabs/tmpl/tabs.html'
+], function(_, Marionette, TabsTemplates) {
 
   return Marionette.ItemView.extend({
 
-    template: _.template(TabsTemplate),
+    template: _.template(TabsTemplates),
 
     setCurrent: function(appName) {
       appName = appName.replace(".", "-");

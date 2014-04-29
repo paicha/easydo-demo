@@ -52,10 +52,14 @@ require([
   'underscore',
   'bootstrap',
   'app',
+  // entities
+  'entities/navbar',
+  'entities/orgtree',
+  // apps
   'apps/desks/app',
   'apps/sales/app',
-  'apps/account/app',
-], function(Backbone, _, bootstrap, App, DesksApp, SalesApp, AccountApp) {
+  'apps/account/app'
+], function(Backbone, _, bootstrap, App, NavbarEntities, DesksApp, SalesApp, AccountApp) {
 
   require(['compute']);
 

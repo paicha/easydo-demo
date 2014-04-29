@@ -1,0 +1,29 @@
+{
+    "count": 4,
+    "result": [
+        {
+            "object_type": "group",
+            "id": "248083",
+            "parent": "549805",
+            "title": "总裁"
+        },
+        {
+            "object_type": "group",
+            "id": "833629",
+            "parent": "549805",
+            "title": "副总裁"
+        },
+        {
+            "object_type": "group",
+            "id": "717535",
+            "parent": "549805",
+            "title": "总经理"
+        },
+        {
+            "object_type": "group",
+            "id": "923540",
+            "parent": "549805",
+            "title": "总经理助理"
+        }
+    ]
+}

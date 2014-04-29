@@ -18,7 +18,7 @@ define([
     controller: Controller,
 
     appRoutes: {
-      "sales-case": "CaseApp"
+      "sales-case": "caseApp"
     }
   });
 

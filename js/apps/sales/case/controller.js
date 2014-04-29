@@ -8,7 +8,7 @@ define([
 
   var controller = {
 
-    CaseApp: function() {
+    caseApp: function() {
       contentview = new ContentView();
       App.pagecontent.show(contentview);
     }

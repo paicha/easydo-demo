@@ -10,6 +10,8 @@ define([
     UserlistApp: function() {
       contentview = new ContentView();
       App.pagecontent.show(contentview);
+      App.pageleft.close();
+      App.pageright.close();
     }
 
   };

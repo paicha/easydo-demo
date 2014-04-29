@@ -28,6 +28,14 @@ define([
     modal: ModalRegion
   });
 
+  App.pageleft.on("before:show", function(view) {
+    $('#page-left').removeClass('hidden');
+  });
+
+  App.pageright.on("before:show", function(view) {
+    $('#page-right').removeClass('hidden');
+  });
+
   App.addInitializer(function() {
     var navController = new NavController();
     navController.showNavbar(App.navbar);

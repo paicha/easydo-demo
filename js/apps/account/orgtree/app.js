@@ -9,8 +9,7 @@ define([
   });
 
   OrgtreeApp.on("start", function() {
-    var treeView = Controller.orgTreeApp();
-    App.pageleft.show(treeView);
+    Controller.orgTreeApp();
   });
 
   OrgtreeApp.on("stop", function() {

@@ -223,13 +223,6 @@ body {
 }
 
 /* 导航树 */
-.navtree ul, li {
-  list-style: none;
-}
-.navtree ul {
-  padding-left: 10px;
-margin-left: 10px;
-}
-.toggle-icon {
-  padding-right: 5px;
+#orgtree {
+  padding: 10px 0;
 }

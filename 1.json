@@ -1,0 +1,20 @@
+[
+  {
+    "nodeName": "总裁",
+    "id": "17",
+    "icon": "icon-home",
+    "nodes": []
+  },
+  {
+    "nodeName": "副总裁",
+    "id": "18",
+    "icon": "icon-home",
+    "nodes": []
+  },
+  {
+    "nodeName": "总经理",
+    "id": "19",
+    "icon": "icon-home",
+    "nodes": []
+  }
+]

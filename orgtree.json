@@ -1,54 +1,54 @@
 [
   {
     "nodeName": "测试站点",
-    "nodeId": "0",
+    "id": "0",
     "icon":"icon-home",
     "nodes": [
       {
         "nodeName": "总裁办",
-        "nodeId": "1",
+        "id": "1",
         "icon":"icon-home",
         "nodes": []
       },
       {
         "nodeName": "财务部",
-        "nodeId": "2",
+        "id": "2",
         "icon":"icon-home",
         "nodes": []
       },
       {
         "nodeName": "人力资源部",
-        "nodeId": "3",
+        "id": "3",
         "icon":"icon-home",
         "nodes": []
       },
       {
         "nodeName": "客户服务部",
-        "nodeId": "4",
+        "id": "4",
         "icon":"icon-home",
         "nodes": []
       },
       {
         "nodeName": "市场开发部",
-        "nodeId": "5",
+        "id": "5",
         "icon":"icon-home",
         "nodes": []
       },
       {
         "nodeName": "培训管理部",
-        "nodeId": "6",
+        "id": "6",
         "icon":"icon-home",
         "nodes": []
       },
       {
         "nodeName": "公关部",
-        "nodeId": "7",
+        "id": "7",
         "icon":"icon-home",
         "nodes": []
       },
       {
         "nodeName": "行政部",
-        "nodeId": "8",
+        "id": "8",
         "icon":"icon-home",
         "nodes": []
       }

@@ -19,9 +19,16 @@ define([
       };
     },
 
-    hiddenNodes: function(){
+    collapse: function() {
       $(this.el).find('li > ul').hide();
-    }
+    },
 
+    loadCss: function() {
+      var link = document.createElement("link");
+      link.type = "text/css";
+      link.rel = "stylesheet";
+      link.href = "js/components/tree/css/navtree.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    }
   });
 });

@@ -16,7 +16,7 @@ define([
 
     _getTree: function(callback, url) {
       $.get(url, function(data) {
-        callback(data);
+        callback(eval(data));
       });
     }
   };

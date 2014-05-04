@@ -12,6 +12,7 @@ define([
         this.unset("nodes");
       }
     }
+
   });
 
 });

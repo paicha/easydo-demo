@@ -1,0 +1,20 @@
+[
+  {
+    "nodeName": "财务部职位一",
+    "id": "27",
+    "icon": "icon-home",
+    "nodes": []
+  },
+  {
+    "nodeName": "财务部职位二",
+    "id": "28",
+    "icon": "icon-home",
+    "nodes": []
+  },
+  {
+    "nodeName": "财务部职位三",
+    "id": "29",
+    "icon": "icon-home",
+    "nodes": []
+  }
+]

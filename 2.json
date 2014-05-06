@@ -1,20 +1,23 @@
 [
   {
     "nodeName": "财务部职位一",
-    "id": "27",
-    "icon": "icon-home",
+    "id": "20",
+    "icon": "icon-user",
+    "is_folder":false,
     "nodes": []
   },
   {
     "nodeName": "财务部职位二",
-    "id": "28",
-    "icon": "icon-home",
+    "id": "21",
+    "icon": "icon-user",
+    "is_folder":false,
     "nodes": []
   },
   {
     "nodeName": "财务部职位三",
-    "id": "29",
-    "icon": "icon-home",
+    "id": "22",
+    "icon": "icon-user",
+    "is_folder":false,
     "nodes": []
   }
 ]

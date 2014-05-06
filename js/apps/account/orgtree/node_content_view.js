@@ -5,7 +5,7 @@ define([
 
   return Marionette.ItemView.extend({
 
-    template: _.template("总裁部门"),
+    template: _.template("子节点"),
   });
 
 });

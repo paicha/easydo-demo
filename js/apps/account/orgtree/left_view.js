@@ -8,7 +8,11 @@ define([
 
     template: _.template(Template),
 
-    triggers: {'click button':'showCheckedList'}
+    triggers: {
+      'click .checked': 'showCheckedList',
+      'click .getNodeId': 'getNode',
+      'click .expandNode': 'expandNode'
+    }
   });
 
 });

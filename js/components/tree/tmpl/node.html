@@ -1,11 +1,11 @@
 <li>
-  <a href="#account-orgtree-{{ id }}">
+  <{{ ((id=="null") ? "div": "a") }} class="node-a-{{ id }}" href="#">
       <div class="node">
-          <span class="toggle-icon icon-plus"></span>
+          <span class="toggle-icon {{ is_folder? "icon-plus" : "hidden" }}" ></span>
           <label class="{{ (checkable ? "" : "hidden") }}">
               <input id="checkbox-{{ id }}" type='checkbox' class="node-checkbox">
           </label>
           <span class="{{ icon }}"></span>{{ nodeName }}
       </div>
-  </a>
+  </{{ ((id=="null") ? "div": "a") }}>
 </li>

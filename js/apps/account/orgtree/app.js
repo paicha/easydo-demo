@@ -26,13 +26,13 @@ define([
     controller: Controller,
 
     appRoutes: {
-      "account-orgtree": "treeRoot",
-      "account-orgtree-ceo": "ceo"
+      "account-orgtree-0": "treeRoot",
+      "account-orgtree-:id": "treeNode"
     }
   });
 
   App.addInitializer(function() {
-    new OrgtreeRouter();
+    App.router = new OrgtreeRouter();
   });
 
   return OrgtreeApp;

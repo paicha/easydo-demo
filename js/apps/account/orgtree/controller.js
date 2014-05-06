@@ -5,9 +5,9 @@ define([
   'app',
   'components/tree/controller',
   'apps/account/orgtree/left_view',
-  'apps/account/orgtree/ceo_content_view',
+  'apps/account/orgtree/node_content_view',
   'apps/account/orgtree/root_content_view'
-], function(_, Marionette, Backbone, App, TreeComponent, LeftView, CeoContentView, RootContentView) {
+], function(_, Marionette, Backbone, App, TreeComponent, LeftView, NodeContentView, RootContentView) {
 
   var Controller = {
 
@@ -19,6 +19,8 @@ define([
       // 初始化导航树组件
       this.treeView = new TreeComponent({
         checkable: true, // 显示复选框
+        css: "js/components/tree/css/navtree.css",
+        is_static: false // 是否静态
       });
 
       // 渲染到左侧栏特定 DOM 区域
@@ -27,21 +29,36 @@ define([
       // 监听加载节点事件
       this.treeView.on("load", this.loadNodes);
 
-      // 监听点击节点事件
-      var that = this;
-      this.treeView.on("clicknode", function(nodeView) {
-        // 得到当前激活项
-        console.log(that.treeView.get_activated());
-      });
-
-      // 得到当前勾选
-      leftView.on('showCheckedList', function(){
-        console.log(that.treeView.get_checked());
-      });
-
       // 加载一级导航树
       $.when(App.request("orgtree:entities", "/orgtree.json"))
         .then(_.bind(this.showTree, this));
+
+      // ====== Test Begin ======
+      var that = this;
+      // 监听点击节点事件
+      this.treeView.on("clicknode", function(nodeView) {
+        App.router.navigate("account-orgtree-" + nodeView.model.get('id'), {
+          trigger: true
+        });
+      });
+      // 打印勾选节点
+      leftView.on('showCheckedList', function() {
+        console.log(that.treeView.get_checked());
+      });
+      // 根据nodeid打印节点
+      leftView.on('getNode', function() {
+        var nodeId = prompt("输入nodeId");
+        var nodeView = that.treeView.get_node(nodeId);
+        console.log(nodeView);
+        nodeView.activate();
+      });
+      // 根据nodeid展开导航树
+      leftView.on('expandNode', function() {
+        that.treeView.get_node_by_path([0, 1, 11], function(node) {
+          node.activate();
+        });
+      });
+      // ====== Test End ====== 
     },
 
     showTree: function(orgtree) {
@@ -62,9 +79,13 @@ define([
         .then(load);
     },
 
-    ceo: function() {
-      var contentview = new CeoContentView();
+    treeNode: function(id) {
+      var contentview = new NodeContentView();
       App.pagecontent.show(contentview);
+
+      this.treeView.get_node_by_path([0, id], function(node) {
+        node.activate();
+      });
     },
 
     treeRoot: function() {

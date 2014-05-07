@@ -26,7 +26,8 @@ define [
       return
 
     uploadFile: (args) ->
-      fileModel = new FileModel collection: @files
+      fileModel = new FileModel {},
+        collection: @files
       uploadview = new UploadView
         model: fileModel
         action: 'create'
@@ -36,7 +37,8 @@ define [
       return
 
     createFolder: (args) ->
-      fileModel = new FileModel collection: @files
+      fileModel = new FileModel {},
+        collection: @files
       uploadview = new UploadView
         model: fileModel
         action: 'create'

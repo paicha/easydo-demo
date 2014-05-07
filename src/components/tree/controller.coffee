@@ -14,10 +14,9 @@ define [
       @checkable = options.checkable
       @css = options.css
       @is_static = options.is_static
-      @treeView = new NavRootView(
+      @treeView = new NavRootView
         collection: new TreeNodeCollection()
         controller: this
-      )
 
       # 加载 css
       @treeView.loadCss @css
@@ -60,22 +59,22 @@ define [
         @on_loaded node
       else
         that = @that
-        _gotNode = _.bind(that._onGotNode,
+        _gotNode = _.bind that._onGotNode,
           on_loaded: @on_loaded
           that: that
-          node_ids: @node_ids.slice(1)
-        )
+          node_ids: @node_ids[1..]
+        
         next_node = that.get_node(@node_ids[0])
         next_node.expand _gotNode
       return
     
     # 根据 node_ids 循环展开对应的节点
     get_node_by_path: (node_ids, on_loaded) ->
-      _gotNode = _.bind(@_onGotNode,
+      _gotNode = _.bind @_onGotNode,
         on_loaded: on_loaded
         that: this
         node_ids: node_ids
-      )
+      
       unless @treeView.collection.length
         @loaded_callback = _gotNode
       else

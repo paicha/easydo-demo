@@ -1,8 +1,8 @@
 define ['backbone'], (Backbone) ->
   Backbone.Model.extend
-    defaults: ''
-    title: ''
-    admin: ''
-    tag: ''
-    size: ''
-    update: ''
+    defaults:
+      title: ''
+      admin: ''
+      tag: ''
+      size: ''
+      update: ''

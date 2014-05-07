@@ -18,7 +18,7 @@ define [
       # 初始化导航树组件
       @treeView = new TreeComponent(
         checkable: true # 显示复选框
-        css: 'js/components/tree/css/navtree.css'
+        css: 'src/components/tree/css/navtree.css'
         is_static: false # 是否静态
       )
 
@@ -57,9 +57,7 @@ define [
           node.activate()
           return
         return
-
       return
-
 
     # ====== Test End ====== 
     showTree: (orgtree) ->
@@ -95,4 +93,4 @@ define [
       App.pagecontent.show contentview
       return
 
-  Controller
+  return Controller

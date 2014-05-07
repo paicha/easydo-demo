@@ -1,19 +1,19 @@
 define [
-  'underscore'
-  'marionette'
-  'text!apps/desks/disk/tmpl/item.html'
+    'underscore'
+    'marionette'
+    'text!apps/desks/disk/tmpl/item.html'
 ], (_, Marionette, ItemTemplate) ->
 
-  Marionette.ItemView.extend
+    Marionette.ItemView.extend
 
-    tagName: 'tr'
+        tagName: 'tr'
 
-    template: _.template(ItemTemplate)
+        template: _.template(ItemTemplate)
 
-    triggers:
-      'click .delete': 'file:delete'
+        triggers:
+            'click .delete': 'file:delete'
 
-    initialize: ->
-      @listenTo @model, 'change', @render, this
-      @listenTo @model, 'destroy', @render, this
-      return
+        initialize: ->
+            @listenTo @model, 'change', @render, this
+            @listenTo @model, 'destroy', @render, this
+            return

@@ -1,15 +1,15 @@
 define [
-  'underscore'
-  'marionette'
-  'text!navbar/tmpl/right.html'
+    'underscore'
+    'marionette'
+    'text!navbar/tmpl/right.html'
 ], (_, Marionette, RightTemplate) ->
-  Marionette.CompositeView.extend
+    Marionette.CompositeView.extend
 
-    template: _.template(RightTemplate)
+        template: _.template(RightTemplate)
 
-    events:
-      'click #nav-edit': 'nav-edit'
+        events:
+            'click #nav-edit': 'nav-edit'
 
-    initialize: (options) ->
-      _.bindAll this
-      return
+        initialize: (options) ->
+            _.bindAll this
+            return

@@ -1,14 +1,14 @@
 define [
-  'underscore'
-  'marionette'
-  'text!apps/desks/page_nav/tmpl/left.html'
+    'underscore'
+    'marionette'
+    'text!apps/desks/page_nav/tmpl/left.html'
 ], (_, Marionette, LeftTemplates) ->
 
-  Marionette.ItemView.extend
+    Marionette.ItemView.extend
 
-    template: _.template(LeftTemplates)
+        template: _.template(LeftTemplates)
 
-    setCurrent: (appName) ->
-      appName = appName.replace('.', '-')
-      $('#' + appName).tab 'show'
-      return
+        setCurrent: (appName) ->
+            appName = appName.replace('.', '-')
+            $('#' + appName).tab 'show'
+            return

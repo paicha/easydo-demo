@@ -1,12 +1,12 @@
 define [
-  'underscore'
-  'marionette'
-  'text!navbar/tmpl/layout.html'
+    'underscore'
+    'marionette'
+    'text!navbar/tmpl/layout.html'
 ], (_, Marionette, LayoutTemplate) ->
-  Marionette.Layout.extend
+    Marionette.Layout.extend
 
-    template: _.template(LayoutTemplate)
+        template: _.template(LayoutTemplate)
 
-    regions:
-      left: '#nav-left'
-      right: '#nav-right'
+        regions:
+            left: '#nav-left'
+            right: '#nav-right'

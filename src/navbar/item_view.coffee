@@ -1,10 +1,10 @@
 define [
-  'underscore'
-  'marionette'
-  'text!navbar/tmpl/item.html'
+    'underscore'
+    'marionette'
+    'text!navbar/tmpl/item.html'
 ], (_, Marionette, ItemTemplate) ->
-  Marionette.ItemView.extend
+    Marionette.ItemView.extend
 
-    tagName: 'li'
+        tagName: 'li'
 
-    template: _.template ItemTemplate
+        template: _.template ItemTemplate

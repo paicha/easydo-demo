@@ -1,6 +1,6 @@
 define [
-  'underscore'
-  'marionette'
+    'underscore'
+    'marionette'
 ], (_, Marionette) ->
 
-  Marionette.ItemView.extend template: _.template('子节点')
+    Marionette.ItemView.extend template: _.template('子节点')

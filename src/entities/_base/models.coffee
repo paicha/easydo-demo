@@ -1,6 +1,6 @@
 define [
-  'app'
-  'backbone'
+    'app'
+    'backbone'
 ], (App, Backbone) ->
-  App.Entities.Model = Backbone.Model.extend()
-  return
+    App.Entities.Model = Backbone.Model.extend()
+    return

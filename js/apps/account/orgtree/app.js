@@ -26,7 +26,6 @@ define([
     controller: Controller,
 
     appRoutes: {
-      "account-orgtree-0": "treeRoot",
       "account-orgtree-:id": "treeNode"
     }
   });

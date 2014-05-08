@@ -10,4 +10,4 @@ define [
 
         setCurrent: (appName) ->
             appName = appName.replace('.', '-')
-            $('#tabs-' + appName).tab 'show'
+            $("#tabs-#{appName}").tab 'show'

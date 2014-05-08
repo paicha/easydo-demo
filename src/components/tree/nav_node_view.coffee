@@ -28,7 +28,7 @@ define [
 
         _clickCheckbox: (node) ->
             nodeName = node.model.get 'nodeName'
-            checked = $('#checkbox-' + node.model.get 'id').prop 'checked'
+            checked = $("#checkbox-#{node.model.get id}").prop 'checked'
             if checked
                 # 保存当前勾选节点
                 @controller.checkedNode[nodeName] = node.view
@@ -69,7 +69,7 @@ define [
             # 获取初始化传递的 checkable 设置
             checkable = @model.get 'checkable'
             # 优先使用数据中的 checkable
-            checkable = @controller.checkable    if typeof checkable is 'undefined'
+            if checkable is 'undefined' then checkable = @controller.checkable
 
             id: @model.get 'id'
             icon: @model.get 'icon'
@@ -96,8 +96,8 @@ define [
                 # 如果 collection 为空、设置了动态加载，而且是目录类型，触发加载节点事件
                 if not @controller.is_static and @model.get 'is_folder'
                     @controller.trigger 'load', this, @model
-                else on_expanded this    if on_expanded
-            else on_expanded this    if on_expanded
+                else if on_expanded then on_expanded this
+            else if on_expanded then on_expanded this
             
             # dom 操作
             $(@el).find('span').first().addClass('icon-minus').removeClass 'icon-plus'
@@ -113,14 +113,14 @@ define [
         activate: ->
             # 上一次的记录的 active
             lastActive = @controller.currentNode
-            lastActive = lastActive.model.get 'id'    if lastActive
+            if lastActive then lastActive = lastActive.model.get 'id'
             # 当前的 active
             currentActive = @model.get 'id'
             if lastActive is currentActive
                     
             else
                 # 取消上次保存的高亮class
-                $('.navtree .node-a-' + lastActive).find('div').removeClass 'node-active'
+                $(".navtree .node-a-#{lastActive}").find('div').removeClass 'node-active'
                 # 当前高亮
                 $(@el).find('.node').first().addClass 'node-active'
                 # 保存当前激活节点

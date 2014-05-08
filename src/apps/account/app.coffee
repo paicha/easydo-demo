@@ -20,8 +20,8 @@ define [
 
     AccountApp.startSubApps = (appName) ->
         currentApp = App.module(appName)
-        return    if AccountApp.currentApp is currentApp
-        AccountApp.currentApp.stop()    if AccountApp.currentApp
+        if AccountApp.currentApp is currentApp then return
+        if AccountApp.currentApp then AccountApp.currentApp.stop()
         AccountApp.currentApp = currentApp
         currentApp.start()
         AccountApp.trigger 'app:account:started', appName

@@ -36,7 +36,7 @@ define [
             that = this
             # 监听点击节点事件
             @treeView.on 'clicknode', (nodeView) ->
-                App.router.navigate 'account-orgtree-' + nodeView.model.get('id'), trigger: true
+                App.router.navigate "account-orgtree-#{nodeView.model.get('id')}", trigger: true
             
             # 打印勾选节点
             leftView.on 'showCheckedList', ->
@@ -69,7 +69,7 @@ define [
                 nodeView.load_nodes data
             
             # 根据当前节点请求相应的URL
-            url = 'api/' + nodeModel.get('id') + '.json'
+            url = "api/#{nodeModel.get('id')}.json"
             $.when App.request 'orgtree:entities', url
                 .then load
 

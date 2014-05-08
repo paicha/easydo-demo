@@ -22,8 +22,8 @@ define [
 
     DesksApp.startSubApps = (appName) ->
         currentApp = App.module(appName)
-        return    if DesksApp.currentApp is currentApp
-        DesksApp.currentApp.stop()    if DesksApp.currentApp
+        if DesksApp.currentApp is currentApp then return
+        if DesksApp.currentApp then DesksApp.currentApp.stop()
         DesksApp.currentApp = currentApp
         currentApp.start()
         DesksApp.trigger 'app:desks:started', appName

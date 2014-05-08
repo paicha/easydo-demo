@@ -14,7 +14,7 @@ define(['underscore', 'marionette', 'text!components/tree/tmpl/node.html'], func
     _clickCheckbox: function(node) {
       var checked, nodeName;
       nodeName = node.model.get('nodeName');
-      checked = $('#checkbox-' + node.model.get('id')).prop('checked');
+      checked = $("#checkbox-" + (node.model.get(id))).prop('checked');
       if (checked) {
         return this.controller.checkedNode[nodeName] = node.view;
       } else {
@@ -51,7 +51,7 @@ define(['underscore', 'marionette', 'text!components/tree/tmpl/node.html'], func
     serializeData: function() {
       var checkable;
       checkable = this.model.get('checkable');
-      if (typeof checkable === 'undefined') {
+      if (checkable === 'undefined') {
         checkable = this.controller.checkable;
       }
       return {
@@ -78,15 +78,11 @@ define(['underscore', 'marionette', 'text!components/tree/tmpl/node.html'], func
         this.on_loaded = on_expanded;
         if (!this.controller.is_static && this.model.get('is_folder')) {
           this.controller.trigger('load', this, this.model);
-        } else {
-          if (on_expanded) {
-            on_expanded(this);
-          }
-        }
-      } else {
-        if (on_expanded) {
+        } else if (on_expanded) {
           on_expanded(this);
         }
+      } else if (on_expanded) {
+        on_expanded(this);
       }
       $(this.el).find('span').first().addClass('icon-minus').removeClass('icon-plus');
       return $(this.el).children().children().filter('ul').show('fast');
@@ -105,7 +101,7 @@ define(['underscore', 'marionette', 'text!components/tree/tmpl/node.html'], func
       if (lastActive === currentActive) {
 
       } else {
-        $('.navtree .node-a-' + lastActive).find('div').removeClass('node-active');
+        $(".navtree .node-a-" + lastActive).find('div').removeClass('node-active');
         $(this.el).find('.node').first().addClass('node-active');
         return this.controller.currentNode = this;
       }

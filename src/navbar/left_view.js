@@ -15,7 +15,7 @@ define(['underscore', 'marionette', 'text!navbar/tmpl/left.html', 'navbar/item_v
     },
     setCurrent: function(appName) {
       $('#navbar li').removeClass('active');
-      return $('#' + appName).tab('show');
+      return $("#" + appName).tab('show');
     }
   });
 });

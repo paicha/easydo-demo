@@ -16,7 +16,7 @@ define(['underscore', 'marionette', 'backbone', 'app', 'components/tree/controll
       $.when(App.request('orgtree:entities', 'api/orgtree.json')).then(_.bind(this.showTree, this));
       that = this;
       this.treeView.on('clicknode', function(nodeView) {
-        return App.router.navigate('account-orgtree-' + nodeView.model.get('id'), {
+        return App.router.navigate("account-orgtree-" + (nodeView.model.get('id')), {
           trigger: true
         });
       });
@@ -48,7 +48,7 @@ define(['underscore', 'marionette', 'backbone', 'app', 'components/tree/controll
         nodeDate = data;
         return nodeView.load_nodes(data);
       };
-      url = 'api/' + nodeModel.get('id') + '.json';
+      url = "api/" + (nodeModel.get('id')) + ".json";
       return $.when(App.request('orgtree:entities', url)).then(load);
     },
     treeNode: function(id) {

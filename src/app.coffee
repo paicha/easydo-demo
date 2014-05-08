@@ -37,12 +37,12 @@ define [
         App.vent.on 'app:started', navController.setCurrentApp, navController
 
     App.on 'initialize:after', ->
-        Backbone.history.start()    if Backbone.history
+        if Backbone.history then Backbone.history.start()
 
     App.startSubApp = (appName, args) ->
         currentApp = App.module(appName)
-        return    if App.currentApp is currentApp
-        App.currentApp.stop()    if App.currentApp
+        if App.currentApp is currentApp then return
+        if App.currentApp then App.currentApp.stop()
         App.currentApp = currentApp
         currentApp.start args
         App.vent.trigger 'app:started', appName

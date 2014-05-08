@@ -19,8 +19,8 @@ define [
 
     SalesApp.startSubApps = (appName) ->
         currentApp = App.module(appName)
-        return    if SalesApp.currentApp is currentApp
-        SalesApp.currentApp.stop()    if SalesApp.currentApp
+        if SalesApp.currentApp is currentApp then return
+        if SalesApp.currentApp then SalesApp.currentApp.stop()
         SalesApp.currentApp = currentApp
         currentApp.start()
         SalesApp.trigger 'app:desks:started', appName

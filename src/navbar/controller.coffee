@@ -30,4 +30,4 @@ define [
         setCurrentApp: (appName) ->
             @selected_app = appName
             # 首次加载由于异步操作，导航数据还未加载渲染，临时保存appName
-            @leftview.setCurrent appName if @leftview
+            if @leftview then @leftview.setCurrent appName

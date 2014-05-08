@@ -4,7 +4,7 @@ define(['underscore', 'marionette', 'text!apps/sales/tabs/tmpl/tabs.html'], func
     template: _.template(TabsTemplate),
     setCurrent: function(appName) {
       appName = appName.replace('.', '-');
-      return $('#tabs-' + appName).tab('show');
+      return $("#tabs-" + appName).tab('show');
     }
   });
 });

@@ -8,13 +8,13 @@ define(['app', 'marionette', 'apps/desks/page_nav/controller', 'apps/desks/disk/
     var controller;
     controller = new Controller();
     controller.showPageNav(App.pageleft);
-    DesksApp.on('app:desks:started', controller.setCurrentApp, controller);
+    return DesksApp.on('app:desks:started', controller.setCurrentApp, controller);
   });
   DesksApp.on('stop', function() {
     App.pagetabs.reset();
     App.pageleft.reset();
     App.pageright.reset();
-    DesksApp.currentApp = '';
+    return DesksApp.currentApp = '';
   });
   DesksApp.startSubApps = function(appName) {
     var currentApp;
@@ -27,7 +27,7 @@ define(['app', 'marionette', 'apps/desks/page_nav/controller', 'apps/desks/disk/
     }
     DesksApp.currentApp = currentApp;
     currentApp.start();
-    DesksApp.trigger('app:desks:started', appName);
+    return DesksApp.trigger('app:desks:started', appName);
   };
   return DesksApp;
 });

@@ -16,4 +16,3 @@ define [
         initialize: ->
             @listenTo @model, 'change', @render, this
             @listenTo @model, 'destroy', @render, this
-            return

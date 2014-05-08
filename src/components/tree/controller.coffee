@@ -24,7 +24,6 @@ define [
             @checkedNode = {}
             # 初始化保存 已加载节点 的变量
             @nodeList = {}
-            return
 
         # 加载根节点
         load_nodes: (data) ->
@@ -33,13 +32,11 @@ define [
             if @loaded_callback
                 @loaded_callback this
                 @loaded_callback = null
-            return
         
         # 渲染初始化后的导航树
         render: (dom) ->
             @treeView.render()
             $(dom).html @treeView.el
-            return
 
         # 返回已勾选节点对象
         get_checked: ->
@@ -66,7 +63,6 @@ define [
                 
                 next_node = that.get_node(@node_ids[0])
                 next_node.expand _gotNode
-            return
         
         # 根据 node_ids 循环展开对应的节点
         get_node_by_path: (node_ids, on_loaded) ->
@@ -79,6 +75,3 @@ define [
                 @loaded_callback = _gotNode
             else
                 _gotNode this
-            return
-    
-    Controller

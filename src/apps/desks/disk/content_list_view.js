@@ -8,7 +8,7 @@ define(['underscore', 'marionette', 'text!apps/desks/disk/tmpl/list.html', 'apps
       'click .createFolder': 'file:createFolder'
     },
     appendHtml: function(collectionView, itemView) {
-      collectionView.$('tbody').append(itemView.el);
+      return collectionView.$('tbody').append(itemView.el);
     }
   });
 });

@@ -10,7 +10,6 @@ define [
         before: ->
             App.startSubApp 'DesksApp'
             App.DesksApp.startSubApps 'DesksApp.TodoApp'
-            return
 
         controller: Controller
 
@@ -19,6 +18,5 @@ define [
 
     App.addInitializer ->
         new TodoRouter()
-        return
 
     TodoApp

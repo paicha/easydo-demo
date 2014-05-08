@@ -15,7 +15,6 @@ define [
             App = require 'app'
             $.when App.request 'navbar:entities'
                 .then func
-            return
 
         _showNavbar: (navbarCollection) ->
             layoutview = new LayoutView()
@@ -27,11 +26,8 @@ define [
             layoutview.right.show rightview
 
             @leftview.setCurrent @selected_app
-            return
 
         setCurrentApp: (appName) ->
             @selected_app = appName
             # 首次加载由于异步操作，导航数据还未加载渲染，临时保存appName
             @leftview.setCurrent appName if @leftview
-
-    Controller

@@ -4,14 +4,14 @@ define(['app', 'backbone', 'entities/_base/collections', 'entities/_base/models'
   NavModel = App.Entities.Model.extend();
   NavbarCollection = App.Entities.Collection.extend({
     model: NavModel,
-    url: '/navbar.json'
+    url: 'api/navbar.json'
   });
   API = {
     getAll: function() {
       var deferred;
       deferred = $.Deferred();
       this._getNavbar(function(navbarCollection) {
-        deferred.resolve(navbarCollection);
+        return deferred.resolve(navbarCollection);
       });
       return deferred.promise();
     },
@@ -19,12 +19,12 @@ define(['app', 'backbone', 'entities/_base/collections', 'entities/_base/models'
       var navbarCollection;
       navbarCollection = new NavbarCollection();
       navbarCollection.on('reset', callback);
-      navbarCollection.fetch({
+      return navbarCollection.fetch({
         reset: true
       });
     }
   };
-  App.reqres.setHandler('navbar:entities', function() {
+  return App.reqres.setHandler('navbar:entities', function() {
     return API.getAll();
   });
 });

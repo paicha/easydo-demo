@@ -6,7 +6,7 @@ define(['underscore', 'marionette', 'text!navbar/tmpl/right.html'], function(_, 
       'click #nav-edit': 'nav-edit'
     },
     initialize: function(options) {
-      _.bindAll(this);
+      return _.bindAll(this);
     }
   });
 });

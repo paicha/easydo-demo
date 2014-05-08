@@ -7,7 +7,7 @@ define(['app', 'marionette', 'apps/sales/case/controller'], function(App, Marion
   CaseRouter = Marionette.AppRouter.extend({
     before: function() {
       App.startSubApp('SalesApp');
-      App.SalesApp.startSubApps('SalesApp.CaseApp');
+      return App.SalesApp.startSubApps('SalesApp.CaseApp');
     },
     controller: Controller,
     appRoutes: {
@@ -15,7 +15,7 @@ define(['app', 'marionette', 'apps/sales/case/controller'], function(App, Marion
     }
   });
   App.addInitializer(function() {
-    new CaseRouter();
+    return new CaseRouter();
   });
   return CaseApp;
 });

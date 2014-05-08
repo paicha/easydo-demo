@@ -12,4 +12,4 @@ define [
 
         initialize: (options) ->
             _.bindAll this
-            return
+                

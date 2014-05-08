@@ -25,7 +25,6 @@ define [
             
             # 点击节点事件
             @on 'click:node', @_clickNode
-            return
 
         _clickCheckbox: (node) ->
             nodeName = node.model.get 'nodeName'
@@ -36,19 +35,17 @@ define [
             else
                 # 如果没勾选，删除
                 delete @controller.checkedNode[nodeName]
-            return
 
         _clickNode: (node) ->
             # 设置高亮
             @activate()
             # 触发 controller 的 clicknode 事件
             @controller.trigger 'clicknode', node.view
-            return
+
 
         # 点击展开折叠事件
         _onToggle: (node) ->
             if @isExpanded() then @collapse() else @expand()
-            return
 
         triggers:
             'click .toggle-icon': 'click:toggle'
@@ -65,7 +62,7 @@ define [
             if @on_loaded
                 @on_loaded this
                 @on_loaded = null
-            return
+
 
         # 自定义序列化数据
         serializeData: ->
@@ -78,7 +75,6 @@ define [
             icon: @model.get 'icon'
             nodeName: @model.get 'nodeName'
             is_folder: @model.get 'is_folder'
-            
             checkable: checkable
 
         # 传递 controller 到子节点 View
@@ -88,7 +84,6 @@ define [
         # 渲染节点
         appendHtml: (collectionView, itemView) ->
             collectionView.$('li:first').append itemView.el
-            return
 
         # 判断是否展开
         isExpanded: ->
@@ -107,13 +102,12 @@ define [
             # dom 操作
             $(@el).find('span').first().addClass('icon-minus').removeClass 'icon-plus'
             $(@el).children().children().filter('ul').show 'fast'
-            return
+
         
         # 折叠操作
         collapse: ->
             $(@el).find('span').first().addClass('icon-plus').removeClass 'icon-minus'
             $(@el).children().children().filter('ul').hide 'fast'
-            return
 
         # 设置高亮
         activate: ->
@@ -123,7 +117,7 @@ define [
             # 当前的 active
             currentActive = @model.get 'id'
             if lastActive is currentActive
-                return
+                    
             else
                 # 取消上次保存的高亮class
                 $('.navtree .node-a-' + lastActive).find('div').removeClass 'node-active'
@@ -131,5 +125,3 @@ define [
                 $(@el).find('.node').first().addClass 'node-active'
                 # 保存当前激活节点
                 @controller.currentNode = this
-            return
-

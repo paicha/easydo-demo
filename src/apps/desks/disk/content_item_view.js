@@ -8,7 +8,7 @@ define(['underscore', 'marionette', 'text!apps/desks/disk/tmpl/item.html'], func
     },
     initialize: function() {
       this.listenTo(this.model, 'change', this.render, this);
-      this.listenTo(this.model, 'destroy', this.render, this);
+      return this.listenTo(this.model, 'destroy', this.render, this);
     }
   });
 });

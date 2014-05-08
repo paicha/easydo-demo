@@ -9,27 +9,27 @@ define(['underscore', 'marionette', 'text!components/tree/tmpl/node.html'], func
       this.controller.nodeList[this.model.id] = this;
       this.on('click:toggle', this._onToggle);
       this.on('click:checkbox', this._clickCheckbox);
-      this.on('click:node', this._clickNode);
+      return this.on('click:node', this._clickNode);
     },
     _clickCheckbox: function(node) {
       var checked, nodeName;
       nodeName = node.model.get('nodeName');
       checked = $('#checkbox-' + node.model.get('id')).prop('checked');
       if (checked) {
-        this.controller.checkedNode[nodeName] = node.view;
+        return this.controller.checkedNode[nodeName] = node.view;
       } else {
-        delete this.controller.checkedNode[nodeName];
+        return delete this.controller.checkedNode[nodeName];
       }
     },
     _clickNode: function(node) {
       this.activate();
-      this.controller.trigger('clicknode', node.view);
+      return this.controller.trigger('clicknode', node.view);
     },
     _onToggle: function(node) {
       if (this.isExpanded()) {
-        this.collapse();
+        return this.collapse();
       } else {
-        this.expand();
+        return this.expand();
       }
     },
     triggers: {
@@ -45,7 +45,7 @@ define(['underscore', 'marionette', 'text!components/tree/tmpl/node.html'], func
       this.collection.add(data);
       if (this.on_loaded) {
         this.on_loaded(this);
-        this.on_loaded = null;
+        return this.on_loaded = null;
       }
     },
     serializeData: function() {
@@ -68,7 +68,7 @@ define(['underscore', 'marionette', 'text!components/tree/tmpl/node.html'], func
       };
     },
     appendHtml: function(collectionView, itemView) {
-      collectionView.$('li:first').append(itemView.el);
+      return collectionView.$('li:first').append(itemView.el);
     },
     isExpanded: function() {
       return $(this.el).find('span').first().attr('class').indexOf('plus') <= -1;
@@ -89,11 +89,11 @@ define(['underscore', 'marionette', 'text!components/tree/tmpl/node.html'], func
         }
       }
       $(this.el).find('span').first().addClass('icon-minus').removeClass('icon-plus');
-      $(this.el).children().children().filter('ul').show('fast');
+      return $(this.el).children().children().filter('ul').show('fast');
     },
     collapse: function() {
       $(this.el).find('span').first().addClass('icon-plus').removeClass('icon-minus');
-      $(this.el).children().children().filter('ul').hide('fast');
+      return $(this.el).children().children().filter('ul').hide('fast');
     },
     activate: function() {
       var currentActive, lastActive;
@@ -103,11 +103,11 @@ define(['underscore', 'marionette', 'text!components/tree/tmpl/node.html'], func
       }
       currentActive = this.model.get('id');
       if (lastActive === currentActive) {
-        return;
+
       } else {
         $('.navtree .node-a-' + lastActive).find('div').removeClass('node-active');
         $(this.el).find('.node').first().addClass('node-active');
-        this.controller.currentNode = this;
+        return this.controller.currentNode = this;
       }
     }
   });

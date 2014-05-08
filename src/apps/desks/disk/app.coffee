@@ -8,21 +8,18 @@ define [
     
     DiskApp.on 'stop', ->
         App.pageright.reset()
-        return
 
     DiskRouter = Marionette.AppRouter.extend
         before: ->
             App.startSubApp 'DesksApp'
             App.DesksApp.startSubApps 'DesksApp.DiskApp'
-            return
 
         controller: Controller
 
         appRoutes:
             'desks-disk': 'DiskApp'
-    
+
     App.addInitializer ->
         new DiskRouter()
-        return
 
     DiskApp

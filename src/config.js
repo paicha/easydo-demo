@@ -42,5 +42,5 @@ require.config({
 
 require(['backbone', 'underscore', 'bootstrap', 'app', 'entities/navbar', 'entities/orgtree', 'apps/desks/app', 'apps/sales/app', 'apps/account/app'], function(Backbone, _, bootstrap, App, NavbarEntities, DesksApp, SalesApp, AccountApp) {
   require(['compute']);
-  App.start();
+  return App.start();
 });

@@ -15,12 +15,12 @@ define [
             # 渲染左侧栏内容
             leftView = new LeftView()
             App.pageleft.show leftView
+
             # 初始化导航树组件
-            @treeView = new TreeComponent(
+            @treeView = new TreeComponent
                 checkable: true # 显示复选框
                 css: 'src/components/tree/css/navtree.css'
                 is_static: false # 是否静态
-            )
 
             # 渲染到左侧栏特定 DOM 区域
             @treeView.render '#orgtree'
@@ -29,35 +29,30 @@ define [
             @treeView.on 'load', @loadNodes
             
             # 加载一级导航树
-            $.when App.request('orgtree:entities', '/orgtree.json') .then _.bind(@showTree, this)
+            $.when App.request 'orgtree:entities', 'api/orgtree.json'
+                .then _.bind @showTree, this
             
             # ====== Test Begin ======
             that = this
             # 监听点击节点事件
             @treeView.on 'clicknode', (nodeView) ->
                 App.router.navigate 'account-orgtree-' + nodeView.model.get('id'), trigger: true
-                return
             
             # 打印勾选节点
             leftView.on 'showCheckedList', ->
                 console.log that.treeView.get_checked()
-                return
             
             # 根据nodeid打印节点
             leftView.on 'getNode', ->
-                nodeId = prompt('输入nodeId')
+                nodeId = prompt '输入nodeId'
                 nodeView = that.treeView.get_node nodeId
                 console.log nodeView
                 nodeView.activate()
-                return
 
             # 根据nodeid展开导航树
             leftView.on 'expandNode', ->
                 that.treeView.get_node_by_path [0, 1, 11], (node) ->
                     node.activate()
-                    return
-                return
-            return
 
         # ====== Test End ====== 
         showTree: (orgtree) ->
@@ -65,7 +60,6 @@ define [
             treedata = orgtree
             # 加载数据到导航树
             @treeView.load_nodes treedata
-            return
 
         loadNodes: (nodeView, nodeModel) ->
             load = (data) ->
@@ -73,24 +67,18 @@ define [
                 nodeDate = data
                 # 加载数据到导航树
                 nodeView.load_nodes data
-                return
             
             # 根据当前节点请求相应的URL
-            url = '/' + nodeModel.get('id') + '.json'
-            $.when App.request('orgtree:entities', url) .then load
-            return
+            url = 'api/' + nodeModel.get('id') + '.json'
+            $.when App.request 'orgtree:entities', url
+                .then load
 
         treeNode: (id) ->
             contentview = new NodeContentView()
             App.pagecontent.show contentview
             @treeView.get_node_by_path [0, id], (node) ->
                 node.activate()
-                return
-            return
 
         treeRoot: ->
             contentview = new RootContentView()
             App.pagecontent.show contentview
-            return
-
-    return Controller

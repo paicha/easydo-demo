@@ -5,12 +5,12 @@ define(['app', 'marionette', 'apps/desks/disk/controller'], function(App, Marion
     startWithParent: false
   });
   DiskApp.on('stop', function() {
-    App.pageright.reset();
+    return App.pageright.reset();
   });
   DiskRouter = Marionette.AppRouter.extend({
     before: function() {
       App.startSubApp('DesksApp');
-      App.DesksApp.startSubApps('DesksApp.DiskApp');
+      return App.DesksApp.startSubApps('DesksApp.DiskApp');
     },
     controller: Controller,
     appRoutes: {
@@ -18,7 +18,7 @@ define(['app', 'marionette', 'apps/desks/disk/controller'], function(App, Marion
     }
   });
   App.addInitializer(function() {
-    new DiskRouter();
+    return new DiskRouter();
   });
   return DiskApp;
 });

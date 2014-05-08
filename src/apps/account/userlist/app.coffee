@@ -10,7 +10,6 @@ define [
         before: ->
             App.startSubApp 'AccountApp'
             App.AccountApp.startSubApps 'AccountApp.UserlistApp'
-            return
 
         controller: Controller
 
@@ -19,6 +18,5 @@ define [
 
     App.addInitializer ->
         new UserlistRouter()
-        return
 
     UserlistApp

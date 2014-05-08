@@ -6,17 +6,17 @@ define(['app'], function(App) {
       var deferred;
       deferred = $.Deferred();
       this._getTree((function(data) {
-        deferred.resolve(data);
+        return deferred.resolve(data);
       }), url);
       return deferred.promise();
     },
     _getTree: function(callback, url) {
-      $.get(url, function(data) {
-        callback(eval(data));
+      return $.get(url, function(data) {
+        return callback(eval(data));
       });
     }
   };
-  App.reqres.setHandler('orgtree:entities', function(url) {
+  return App.reqres.setHandler('orgtree:entities', function(url) {
     return API.getAll(url);
   });
 });

@@ -10,10 +10,6 @@ define [
         showTabs: (regions) ->
             @tabsview = new TabsView()
             regions.show @tabsview
-            return
 
         setCurrentApp: (appName) ->
             @tabsview.setCurrent appName
-            return
-
-    Controller

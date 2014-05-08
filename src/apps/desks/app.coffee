@@ -12,7 +12,6 @@ define [
         controller = new Controller()
         controller.showPageNav App.pageleft
         DesksApp.on 'app:desks:started', controller.setCurrentApp, controller
-        return
 
     DesksApp.on 'stop', ->
         App.pagetabs.reset()
@@ -20,7 +19,6 @@ define [
         App.pageright.reset()
         # 清空记录的当前应用
         DesksApp.currentApp = ''
-        return
 
     DesksApp.startSubApps = (appName) ->
         currentApp = App.module(appName)
@@ -29,6 +27,5 @@ define [
         DesksApp.currentApp = currentApp
         currentApp.start()
         DesksApp.trigger 'app:desks:started', appName
-        return
 
     DesksApp

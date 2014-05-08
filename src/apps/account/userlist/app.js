@@ -7,7 +7,7 @@ define(['app', 'marionette', 'apps/account/userlist/controller'], function(App, 
   UserlistRouter = Marionette.AppRouter.extend({
     before: function() {
       App.startSubApp('AccountApp');
-      App.AccountApp.startSubApps('AccountApp.UserlistApp');
+      return App.AccountApp.startSubApps('AccountApp.UserlistApp');
     },
     controller: Controller,
     appRoutes: {
@@ -15,7 +15,7 @@ define(['app', 'marionette', 'apps/account/userlist/controller'], function(App, 
     }
   });
   App.addInitializer(function() {
-    new UserlistRouter();
+    return new UserlistRouter();
   });
   return UserlistApp;
 });

@@ -10,7 +10,6 @@ define [
         before: ->
             App.startSubApp 'SalesApp'
             App.SalesApp.startSubApps 'SalesApp.CaseApp'
-            return
 
         controller: Controller
 
@@ -19,6 +18,5 @@ define [
 
     App.addInitializer ->
         new CaseRouter()
-        return
 
     CaseApp

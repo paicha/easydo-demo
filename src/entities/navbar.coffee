@@ -9,23 +9,19 @@ define [
 
     NavbarCollection = App.Entities.Collection.extend
         model: NavModel
-        url: '/navbar.json'
+        url: 'api/navbar.json'
 
     API =
         getAll: ->
             deferred = $.Deferred()
             @_getNavbar (navbarCollection) ->
                 deferred.resolve navbarCollection
-                return
             deferred.promise()
 
         _getNavbar: (callback) ->
             navbarCollection = new NavbarCollection()
             navbarCollection.on 'reset', callback
             navbarCollection.fetch reset: true
-            return
 
     App.reqres.setHandler 'navbar:entities', ->
         API.getAll()
-
-    return

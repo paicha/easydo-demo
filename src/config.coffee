@@ -61,4 +61,3 @@ require [
 ], (Backbone, _, bootstrap, App, NavbarEntities, DesksApp, SalesApp, AccountApp) ->
     require ['compute']
     App.start()
-    return

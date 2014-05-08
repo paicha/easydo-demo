@@ -10,10 +10,6 @@ define [
         showPageNav: (regions) ->
             @leftview = new LeftView()
             regions.show @leftview
-            return
 
         setCurrentApp: (appName) ->
             @leftview.setCurrent appName
-            return
-
-    Controller

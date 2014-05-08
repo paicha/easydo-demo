@@ -9,6 +9,3 @@ define [
     controller = TodoApp: ->
         contentview = new ContentView()
         App.pagecontent.show contentview
-        return
-
-    controller

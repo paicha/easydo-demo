@@ -10,6 +10,3 @@ define [
         App.pagecontent.show contentview
         App.pageleft.close()
         App.pageright.close()
-        return
-
-    Controller

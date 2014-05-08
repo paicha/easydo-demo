@@ -7,7 +7,7 @@ define(['app', 'marionette', 'apps/desks/todo/controller'], function(App, Marion
   TodoRouter = Marionette.AppRouter.extend({
     before: function() {
       App.startSubApp('DesksApp');
-      App.DesksApp.startSubApps('DesksApp.TodoApp');
+      return App.DesksApp.startSubApps('DesksApp.TodoApp');
     },
     controller: Controller,
     appRoutes: {
@@ -15,7 +15,7 @@ define(['app', 'marionette', 'apps/desks/todo/controller'], function(App, Marion
     }
   });
   App.addInitializer(function() {
-    new TodoRouter();
+    return new TodoRouter();
   });
   return TodoApp;
 });

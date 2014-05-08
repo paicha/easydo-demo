@@ -7,4 +7,3 @@ define ['apps/desks/disk/file_model'], (FileModel) ->
  
         parse: (resp, options) ->
             resp
-

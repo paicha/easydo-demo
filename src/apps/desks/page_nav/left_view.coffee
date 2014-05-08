@@ -11,4 +11,4 @@ define [
         setCurrent: (appName) ->
             appName = appName.replace('.', '-')
             $('#' + appName).tab 'show'
-            return
+                

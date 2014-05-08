@@ -23,7 +23,6 @@ define [
             App.pageright.show rightview
             rightview.on 'file:upload', @uploadFile, this
             rightview.on 'file:createFolder', @createFolder, this
-            return
 
         uploadFile: (args) ->
             fileModel = new FileModel {},
@@ -34,7 +33,6 @@ define [
 
             uploadview.on 'file:save', @saveFile, this
             App.modal.show uploadview
-            return
 
         createFolder: (args) ->
             fileModel = new FileModel {},
@@ -45,7 +43,6 @@ define [
 
             uploadview.on 'file:save', @saveFile, this
             App.modal.show uploadview
-            return
 
         saveFile: (args) ->
             self = this
@@ -66,12 +63,6 @@ define [
                 success: (model, response, options) ->
                     self.files.add model
                     App.modal.hideModal()
-                    return
 
                 error: (model, xhr, options) ->
                     console.log 'User save server ERROR'
-                    return
-
-            return
-
-    DiskController

@@ -8,11 +8,11 @@ define(['app', 'marionette', 'apps/account/tabs/controller', 'apps/account/userl
     var controller;
     controller = new Controller();
     controller.showTabs(App.pagetabs);
-    AccountApp.on('app:account:started', controller.setCurrentApp, controller);
+    return AccountApp.on('app:account:started', controller.setCurrentApp, controller);
   });
   AccountApp.on('stop', function() {
     App.pagetabs.reset();
-    AccountApp.currentApp = '';
+    return AccountApp.currentApp = '';
   });
   AccountApp.startSubApps = function(appName) {
     var currentApp;
@@ -25,7 +25,7 @@ define(['app', 'marionette', 'apps/account/tabs/controller', 'apps/account/userl
     }
     AccountApp.currentApp = currentApp;
     currentApp.start();
-    AccountApp.trigger('app:account:started', appName);
+    return AccountApp.trigger('app:account:started', appName);
   };
   return AccountApp;
 });

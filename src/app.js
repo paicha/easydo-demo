@@ -6,10 +6,10 @@ define(['backbone', 'marionette', 'navbar/controller'], function(Backbone, Mario
     el: '#modal',
     onShow: function(view) {
       view.on('close', this.hideModal, this);
-      this.$el.modal('show');
+      return this.$el.modal('show');
     },
     hideModal: function() {
-      this.$el.modal('hide');
+      return this.$el.modal('hide');
     }
   });
   App.addRegions({
@@ -21,20 +21,20 @@ define(['backbone', 'marionette', 'navbar/controller'], function(Backbone, Mario
     modal: ModalRegion
   });
   App.pageleft.on('before:show', function(view) {
-    $('#page-left').removeClass('hidden');
+    return $('#page-left').removeClass('hidden');
   });
   App.pageright.on('before:show', function(view) {
-    $('#page-right').removeClass('hidden');
+    return $('#page-right').removeClass('hidden');
   });
   App.addInitializer(function() {
     var navController;
     navController = new NavController();
     navController.showNavbar(App.navbar);
-    App.vent.on('app:started', navController.setCurrentApp, navController);
+    return App.vent.on('app:started', navController.setCurrentApp, navController);
   });
   App.on('initialize:after', function() {
     if (Backbone.history) {
-      Backbone.history.start();
+      return Backbone.history.start();
     }
   });
   App.startSubApp = function(appName, args) {
@@ -48,7 +48,7 @@ define(['backbone', 'marionette', 'navbar/controller'], function(Backbone, Mario
     }
     App.currentApp = currentApp;
     currentApp.start(args);
-    App.vent.trigger('app:started', appName);
+    return App.vent.trigger('app:started', appName);
   };
   return App;
 });

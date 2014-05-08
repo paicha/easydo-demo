@@ -4,7 +4,7 @@ define(['underscore', 'marionette', 'text!apps/desks/page_nav/tmpl/left.html'], 
     template: _.template(LeftTemplates),
     setCurrent: function(appName) {
       appName = appName.replace('.', '-');
-      $('#' + appName).tab('show');
+      return $('#' + appName).tab('show');
     }
   });
 });

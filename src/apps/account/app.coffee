@@ -12,13 +12,11 @@ define [
         controller = new Controller()
         controller.showTabs App.pagetabs
         AccountApp.on 'app:account:started', controller.setCurrentApp, controller
-        return
 
     AccountApp.on 'stop', ->
         App.pagetabs.reset()
         # 清空记录的当前应用
         AccountApp.currentApp = ''
-        return
 
     AccountApp.startSubApps = (appName) ->
         currentApp = App.module(appName)
@@ -27,6 +25,5 @@ define [
         AccountApp.currentApp = currentApp
         currentApp.start()
         AccountApp.trigger 'app:account:started', appName
-        return
 
     AccountApp

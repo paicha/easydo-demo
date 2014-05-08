@@ -8,4 +8,3 @@ define [
             TreeNodeCollection = require 'components/tree/tree_node_collection'
             @nodes = new TreeNodeCollection nodes
             @unset 'nodes'
-        return

@@ -10,12 +10,12 @@ define(['underscore', 'marionette', 'text!navbar/tmpl/left.html', 'navbar/item_v
         collectionView.$('.dropdown-menu').append(itemView.el);
       }
       if (index === 3) {
-        collectionView.$('.dropdown').removeClass('hidden');
+        return collectionView.$('.dropdown').removeClass('hidden');
       }
     },
     setCurrent: function(appName) {
       $('#navbar li').removeClass('active');
-      $('#' + appName).tab('show');
+      return $('#' + appName).tab('show');
     }
   });
 });

@@ -7,7 +7,7 @@ define(['underscore', 'backbone'], function(_, Backbone) {
       if (nodes) {
         TreeNodeCollection = require('components/tree/tree_node_collection');
         this.nodes = new TreeNodeCollection(nodes);
-        this.unset('nodes');
+        return this.unset('nodes');
       }
     }
   });

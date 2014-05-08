@@ -9,6 +9,3 @@ define [
     controller = caseApp: ->
         contentview = new ContentView()
         App.pagecontent.show contentview
-        return
-
-    controller

@@ -17,4 +17,3 @@ define [
 
         appendHtml: (collectionView, itemView) ->
             collectionView.$('tbody').append itemView.el
-            return

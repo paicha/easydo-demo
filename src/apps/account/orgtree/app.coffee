@@ -8,18 +8,14 @@ define [
 
     OrgtreeApp.on 'start', ->
         Controller.orgTreeApp()
-        return
 
     OrgtreeApp.on 'stop', ->
         App.pageleft.reset()
-        return
 
     OrgtreeRouter = Marionette.AppRouter.extend
-
         before: ->
             App.startSubApp 'AccountApp'
             App.AccountApp.startSubApps 'AccountApp.OrgtreeApp'
-            return
 
         controller: Controller
 
@@ -28,6 +24,5 @@ define [
 
     App.addInitializer ->
         App.router = new OrgtreeRouter()
-        return
 
     OrgtreeApp

@@ -8,7 +8,6 @@ define [
 
         initialize: (options) ->
             @controller = options.controller
-            return
 
         className: 'navtree'
 
@@ -19,7 +18,6 @@ define [
 
         collapse: ->
             $(@el).find('li > ul').hide()
-            return
 
         loadCss: (url) ->
             link = document.createElement 'link'
@@ -27,5 +25,3 @@ define [
             link.rel = 'stylesheet'
             link.href = url
             document.getElementsByTagName('head')[0].appendChild link
-            return
-

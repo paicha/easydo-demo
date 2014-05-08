@@ -2,5 +2,5 @@
 define(['app', 'backbone'], function(App, Backbone) {
   var Entities;
   Entities = App.module('Entities');
-  Entities.Collection = Backbone.Collection.extend();
+  return Entities.Collection = Backbone.Collection.extend();
 });

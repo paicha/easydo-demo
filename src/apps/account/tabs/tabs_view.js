@@ -4,7 +4,7 @@ define(['underscore', 'marionette', 'text!apps/account/tabs/tmpl/tabs.html'], fu
     template: _.template(TabsTemplates),
     setCurrent: function(appName) {
       appName = appName.replace('.', '-');
-      $('#tabs-' + appName).tab('show');
+      return $('#tabs-' + appName).tab('show');
     }
   });
 });

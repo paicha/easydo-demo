@@ -17,9 +17,7 @@ define [
                 collectionView.$('.dropdown-menu').append itemView.el
             # 当出现第4个导航时，显示下拉导航
             collectionView.$('.dropdown').removeClass 'hidden' if index == 3
-            return
 
         setCurrent: (appName) ->
             $('#navbar li').removeClass 'active'
             $('#' + appName).tab 'show'
-            return

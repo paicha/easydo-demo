@@ -5,15 +5,15 @@ define(['app', 'marionette', 'apps/account/orgtree/controller'], function(App, M
     startWithParent: false
   });
   OrgtreeApp.on('start', function() {
-    Controller.orgTreeApp();
+    return Controller.orgTreeApp();
   });
   OrgtreeApp.on('stop', function() {
-    App.pageleft.reset();
+    return App.pageleft.reset();
   });
   OrgtreeRouter = Marionette.AppRouter.extend({
     before: function() {
       App.startSubApp('AccountApp');
-      App.AccountApp.startSubApps('AccountApp.OrgtreeApp');
+      return App.AccountApp.startSubApps('AccountApp.OrgtreeApp');
     },
     controller: Controller,
     appRoutes: {
@@ -21,7 +21,7 @@ define(['app', 'marionette', 'apps/account/orgtree/controller'], function(App, M
     }
   });
   App.addInitializer(function() {
-    App.router = new OrgtreeRouter();
+    return App.router = new OrgtreeRouter();
   });
   return OrgtreeApp;
 });

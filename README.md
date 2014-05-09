@@ -1,4 +1,4 @@
-easydo-themes
+easydo-demo
 =============
 
-easydo-themes
+base on Bootstrap and Backbone.Marionette

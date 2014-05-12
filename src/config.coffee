@@ -58,6 +58,6 @@ require [
     'apps/desks/app'
     'apps/sales/app'
     'apps/account/app'
-], (Backbone, _, bootstrap, App, NavbarEntities, DesksApp, SalesApp, AccountApp) ->
+], (Backbone, _, bootstrap, App, NavbarEntities, OrgTreeEntities, DesksApp, SalesApp, AccountApp) ->
     require ['compute']
     App.start()

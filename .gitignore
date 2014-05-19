@@ -1,0 +1,5 @@
+node_modules
+test/temp
+app/bower_components
+.tmp
+test/bower_components/

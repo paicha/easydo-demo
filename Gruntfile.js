@@ -91,7 +91,8 @@ module.exports = function(grunt) {
                     'underscore.js': 'underscore/underscore.js',
                     'bootstrap.js': 'bootstrap/dist/js/bootstrap.js',
                     'backbone.localStorage.js': 'backbone.localStorage/backbone.localStorage.js',
-                    'backbone.routeFilter.js': 'backbone.routeFilter/dist/backbone.routeFilter.js'
+                    'backbone.routeFilter.js': 'backbone.routeFilter/dist/backbone.routeFilter.js',
+                    'treeview.js': 'backbone.marionette.treeview/dist/scripts/07df03a0.treeview.js'
                 }
             }
         },
@@ -232,7 +233,8 @@ module.exports = function(grunt) {
                         'text': '../../<%= yeoman.app %>/scripts/vendor/text',
                         'bootstrap': '../../<%= yeoman.app %>/scripts/vendor/bootstrap',
                         'localStorage': '../../<%= yeoman.app %>/scripts/vendor/backbone.localStorage',
-                        'routeFilter': '../../<%= yeoman.app %>/scripts/vendor/backbone.routeFilter'
+                        'routeFilter': '../../<%= yeoman.app %>/scripts/vendor/backbone.routeFilter',
+                        'treeview': '../../<%= yeoman.app %>/scripts/vendor/treeview'
                     },
                     /*paths: {
                         'templates': '../../.tmp/scripts/templates',
@@ -318,7 +320,8 @@ module.exports = function(grunt) {
                         '.htaccess',
                         'images/{,*/}*.{webp,gif}',
                         'styles/fonts/{,*/}*.*',
-                        'bower_components/bootstrap/dist/fonts/*.*'
+                        'bower_components/bootstrap/dist/fonts/*.*',
+                        'bower_components/font-awesome/fonts/*.*'
                     ]
                 }]
             },
@@ -355,7 +358,8 @@ module.exports = function(grunt) {
                         '<%= yeoman.dist %>/styles/{,*/}*.css',
                         '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
                         '/styles/fonts/{,*/}*.*',
-                        'bower_components/bootstrap/dist/fonts/*.*'
+                        'bower_components/bootstrap/dist/fonts/*.*',
+                        'bower_components/font-awesome/fonts/*.*'
                     ]
                 }
             }
@@ -432,6 +436,7 @@ module.exports = function(grunt) {
         'clean:dist',
         'copy:templates',
         'coffee',
+        'less',
         //'createDefaultTemplate',
         //'jst',
         //'compass:dist',

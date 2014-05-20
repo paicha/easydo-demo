@@ -33,10 +33,10 @@ require.config
             exports: 'Marionette'
 
         bootstrap:
-            deps: ['jquery']
+            deps: ['jquery']       
     map:
         '*':
-            underscore:'underscoreTmpl'
+            underscore: 'underscoreTmpl'
         'underscoreTmpl':
             underscore: 'underscore'
 

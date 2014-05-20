@@ -20,7 +20,6 @@ define [
             # 初始化导航树组件
             @treeView = new TreeComponent
                 checkable: true # 显示复选框
-                css: 'scripts/components/tree/css/navtree.css'
                 is_static: false # 是否静态
 
             # 渲染到左侧栏特定 DOM 区域

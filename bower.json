@@ -12,7 +12,8 @@
     "backbone.routeFilter": "~0.2.1",
     "marionette": "~1.8.5",
     "underscore": "1.6.0",
-    "bootstrap": "~3.1.1"
+    "bootstrap": "~3.1.1",
+    "backbone.marionette.treeview": "~0.1.1"
   },
   "devDependencies": {}
 }

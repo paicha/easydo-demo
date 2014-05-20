@@ -8,7 +8,9 @@ define [
     'apps/desks/disk/file_model'
     'apps/desks/disk/upload_view'
     'apps/desks/disk/file_collection'
-], (_, Marionette, Backbone, App, ContentListView, RightView, FileModel, UploadView, FileCollection) ->
+    'apps/desks/disk/share_view'
+    'components/member_selector/scripts/controller'
+], (_, Marionette, Backbone, App, ContentListView, RightView, FileModel, UploadView, FileCollection, ShareView, SelectorComponent) ->
 
     DiskController =
 
@@ -23,6 +25,7 @@ define [
             App.pageright.show rightview
             rightview.on 'file:upload', @uploadFile, this
             rightview.on 'file:createFolder', @createFolder, this
+            contentlistview.on 'file:share', @shareFile, this
 
         uploadFile: (args) ->
             fileModel = new FileModel {},
@@ -66,3 +69,10 @@ define [
 
                 error: (model, xhr, options) ->
                     console.log 'User save server ERROR'
+
+        shareFile: (args) ->
+            shareview = new ShareView
+            App.modal.show shareview
+
+            selectView = new SelectorComponent
+            selectView.render '#disk-select-share'

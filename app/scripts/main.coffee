@@ -16,6 +16,7 @@ require.config
         localStorage: '../scripts/vendor/backbone.localStorage'
         routeFilter: '../scripts/vendor/backbone.routeFilter'
         treeview: '../scripts/vendor/treeview'
+        select2: '../scripts/vendor/select2'
     shim:
         backbone:
             deps: [
@@ -33,7 +34,10 @@ require.config
             exports: 'Marionette'
 
         bootstrap:
-            deps: ['jquery']       
+            deps: ['jquery']
+
+        select2:
+            deps: ['jquery']
     map:
         '*':
             underscore: 'underscoreTmpl'

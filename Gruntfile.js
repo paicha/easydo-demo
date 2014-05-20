@@ -47,7 +47,7 @@ module.exports = function(grunt) {
                 tasks: ['coffee:test']
             },
             compassLess: {
-                files: ['<%= yeoman.app %>/styles/{,*/}*.less'],
+                files: ['<%= yeoman.app %>/styles/{,*/}*.{less,css}'],
                 tasks: ['less']
             },
             livereload: {
@@ -92,7 +92,8 @@ module.exports = function(grunt) {
                     'bootstrap.js': 'bootstrap/dist/js/bootstrap.js',
                     'backbone.localStorage.js': 'backbone.localStorage/backbone.localStorage.js',
                     'backbone.routeFilter.js': 'backbone.routeFilter/dist/backbone.routeFilter.js',
-                    'treeview.js': 'backbone.marionette.treeview/dist/scripts/07df03a0.treeview.js'
+                    'treeview.js': 'backbone.marionette.treeview/dist/scripts/07df03a0.treeview.js',
+                    'select2.js': 'select2/select2.js'
                 }
             }
         },
@@ -234,7 +235,8 @@ module.exports = function(grunt) {
                         'bootstrap': '../../<%= yeoman.app %>/scripts/vendor/bootstrap',
                         'localStorage': '../../<%= yeoman.app %>/scripts/vendor/backbone.localStorage',
                         'routeFilter': '../../<%= yeoman.app %>/scripts/vendor/backbone.routeFilter',
-                        'treeview': '../../<%= yeoman.app %>/scripts/vendor/treeview'
+                        'treeview': '../../<%= yeoman.app %>/scripts/vendor/treeview',
+                        'select2': '../../<%= yeoman.app %>/scripts/vendor/select2',
                     },
                     /*paths: {
                         'templates': '../../.tmp/scripts/templates',
@@ -333,6 +335,16 @@ module.exports = function(grunt) {
                     dest: '.tmp/scripts/',
                     src: ['**/*.html', '**/*.css']
                 }]
+            },
+            images: {
+                files: [{
+                    expand: true,
+                    dot: true,
+                    cwd: '<%= yeoman.app %>/scripts/',
+                    dest: '<%= yeoman.app %>/images/',
+                    flatten:true,
+                    src: ['**/*.{png,jpg,jpeg,gif,webp}']
+                }]
             }
         },
         bower: {
@@ -402,6 +414,7 @@ module.exports = function(grunt) {
             //'createDefaultTemplate',
             //'jst',
             'copy:templates',
+            'copy:images',
             //'compass:server',
             'less',
             'connect:livereload',
@@ -435,6 +448,7 @@ module.exports = function(grunt) {
     grunt.registerTask('build', [
         'clean:dist',
         'copy:templates',
+        'copy:images',
         'coffee',
         'less',
         //'createDefaultTemplate',
@@ -455,7 +469,7 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [
         'bowercopy',
         'jshint',
-        'test',
+        //'test',
         'build'
     ]);
 };

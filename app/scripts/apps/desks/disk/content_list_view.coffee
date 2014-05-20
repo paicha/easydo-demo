@@ -12,8 +12,7 @@ define [
         itemView: ContentItemView
 
         triggers:
-            'click .create': 'file:create'
-            'click .createFolder': 'file:createFolder'
+            'click .share': 'file:share'
 
         appendHtml: (collectionView, itemView) ->
             collectionView.$('tbody').append itemView.el

@@ -92,7 +92,7 @@ module.exports = function(grunt) {
                     'bootstrap.js': 'bootstrap/dist/js/bootstrap.js',
                     'backbone.localStorage.js': 'backbone.localStorage/backbone.localStorage.js',
                     'backbone.routeFilter.js': 'backbone.routeFilter/dist/backbone.routeFilter.js',
-                    'treeview.js': 'backbone.marionette.treeview/dist/scripts/07df03a0.treeview.js',
+                    'treeview.js': 'backbone.marionette.treeview/dist/scripts/47756972.treeview.js',
                     'select2.js': 'select2/select2.js'
                 }
             }
@@ -101,7 +101,7 @@ module.exports = function(grunt) {
             options: {
                 port: grunt.option('port') || SERVER_PORT,
                 // change this to '0.0.0.0' to access the server from outside
-                hostname: 'localhost'
+                hostname: '0.0.0.0'
             },
             livereload: {
                 options: {

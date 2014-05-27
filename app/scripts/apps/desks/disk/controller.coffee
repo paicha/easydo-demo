@@ -71,8 +71,36 @@ define [
                     console.log 'User save server ERROR'
 
         shareFile: (args) ->
-            shareview = new ShareView
-            App.modal.show shareview
+            # 显示分享遮罩弹窗
+            shareView = new ShareView
+            App.modal.show shareView
+            
+            # 初始化选择组件
+            @selectView = new SelectorComponent
+                inputId: "members"
+                multiple: true
+                selectable: ['ou', 'group', 'person']
+            
+            # 渲染
+            @selectView.render '#disk-select-share'
+            
+            # 获取导航树数据
+            $.when(App.request 'orgtree:entities', 'api/orgtree.json')
+                .then _.bind @showTree, this
 
-            selectView = new SelectorComponent
-            selectView.render '#disk-select-share'
+            # 监听事件
+            @selectView.on 'deselect', (node) ->
+                console.log "removed:" + JSON.stringify(node)
+            @selectView.on 'select', (node) ->
+                console.log "added:" + JSON.stringify(node)
+
+            # 打印当前选中
+            that = this
+            shareView.on 'showSelected', ->
+                console.log that.selectView.get_selected()
+
+        showTree: (orgtree) ->
+            # Todo 数据转换
+            treedata = orgtree
+            # 加载数据到导航树
+            @selectView.load_tree treedata

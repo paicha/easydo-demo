@@ -3,12 +3,12 @@ define ['app'], (App) ->
     API =
         getAll: (url) ->
             deferred = $.Deferred()
-            @_getTree ((data) -> deferred.resolve data), url
+            @_getSelect ((data) -> deferred.resolve data), url
             deferred.promise()
 
-        _getTree: (callback, url) ->
+        _getSelect: (callback, url) ->
             $.get url, (data) ->
                 callback data
 
-    App.reqres.setHandler 'orgtree:entities', (url) ->
+    App.reqres.setHandler 'diskShareSelect:entities', (url) ->
         API.getAll url

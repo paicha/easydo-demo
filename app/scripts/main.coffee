@@ -53,6 +53,7 @@ require [
     # entities
     'entities/navbar'
     'entities/orgtree'
+    'entities/disk_select'
     # apps
     'apps/desks/app'
     'apps/sales/app'

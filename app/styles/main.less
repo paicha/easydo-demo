@@ -19,7 +19,9 @@
 /* 导航树组件 */
 @import (less) "treeview.css";
 /* 人员选择组件 */
-@import (less) "../scripts/components/member_selector/styles/select2.css";
+@import (less) "select2.css";
+@import (less) "select2-bootstrap.css";
+
 
 /* 小宽度保持布局 */
 @media (min-width: 768px) and (max-width: 990px){
@@ -243,7 +245,60 @@ body {
   padding-right: 4px;
 }
 
-/* 导航树 */
+/* 账户管理导航树 */
 #orgtree {
   padding: 10px 0;
+}
+
+/* 网盘分享选择组件 */
+.select2-container {
+  width: 100%;
+}
+.select2-results {
+  width: 50%;
+}
+/*.select2-drop-active {
+  border-top: 1px solid #5897fb!important;
+}*/
+
+.select2-drop {
+  min-height: 209px;
+}
+/* */
+.fix-select2-drop-height {
+  height: 239px;
+}
+// 导航树
+.select2-drop>.navtree {
+  width: 200px;
+  height: 204px;
+  position: absolute;
+  right: 0;
+  background-color: #F5F5F5;
+}
+.select2-drop .node {
+  padding: 2px 0 2px 10px;
+}
+.select2-drop .node:hover {
+  background-color: #DDD;
+}
+.select2-drop .node-active:hover {
+  background-color: #2299bb;
+}
+// 导航树第一个ul
+.select2-drop>.navtree>ul {
+  padding-left: 0;
+  margin-left: 0;
+}
+// 组织架构
+.select2-drop>.navtree>span {
+  font-size: 14px;
+  font-weight: bold;
+}
+// 展开箭头
+.select2-choices>span {
+  position: absolute;
+  right: 0;
+  line-height: 34px;
+  font-weight: bold;
 }

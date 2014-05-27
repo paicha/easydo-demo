@@ -53,8 +53,8 @@ define [
             leftView.on 'expandNode', ->
                 that.treeView.get_node_by_path [0, 1, 11], (node) ->
                     node.activate()
+            # ====== Test End ====== 
 
-        # ====== Test End ====== 
         showTree: (orgtree) ->
             # Todo 数据转换
             treedata = orgtree

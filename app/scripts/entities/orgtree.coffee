@@ -10,5 +10,9 @@ define ['app'], (App) ->
             $.get url, (data) ->
                 callback data
 
-    App.reqres.setHandler 'orgtree:entities', (url) ->
+    App.reqres.setHandler 'orgtree:entities', (id) ->
+        if typeof id is "undefined"
+            url = "api/orgtree.json"
+        else
+            url = "api/#{id}.json"
         API.getAll url

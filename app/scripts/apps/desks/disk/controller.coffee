@@ -72,35 +72,17 @@ define [
 
         shareFile: (args) ->
             # 显示分享遮罩弹窗
-            shareView = new ShareView
-            App.modal.show shareView
-            
-            # 初始化选择组件
-            @selectView = new SelectorComponent
-                inputId: "members"
-                multiple: true
-                selectable: ['ou', 'group', 'person']
-            
-            # 渲染
-            @selectView.render '#disk-select-share'
-            
-            # 获取导航树数据
-            $.when(App.request 'orgtree:entities', 'api/orgtree.json')
-                .then _.bind @showTree, this
+            @shareView = new ShareView
+            App.modal.show @shareView
+            # 显示之后才能初始化 Select2
+            @shareView.init()
 
-            # 监听事件
-            @selectView.on 'deselect', (node) ->
+            # 取消选择事件
+            @shareView.on 'deselect', (node) ->
                 console.log "removed:" + JSON.stringify(node)
-            @selectView.on 'select', (node) ->
+            # 选择事件
+            @shareView.on 'select', (node) ->
                 console.log "added:" + JSON.stringify(node)
-
             # 打印当前选中
-            that = this
-            shareView.on 'showSelected', ->
-                console.log that.selectView.get_selected()
-
-        showTree: (orgtree) ->
-            # Todo 数据转换
-            treedata = orgtree
-            # 加载数据到导航树
-            @selectView.load_tree treedata
+            @shareView.on 'showSelected', =>
+                console.log @shareView.get_selected()

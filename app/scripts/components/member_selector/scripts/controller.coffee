@@ -6,7 +6,7 @@ define [
     'app'
     'components/member_selector/scripts/view'
     'select2'
-], ($, _, Marionette, Backbone, App, SelectView, Select2) ->
+], ($, _, Marionette, Backbone, App, MemberSelectorView, Select2) ->
 
     Controller = Marionette.Controller.extend
         initialize: (options) ->
@@ -14,21 +14,29 @@ define [
             @inputId = options.inputId
             @multiple = options.multiple
             @selectable = options.selectable
-            # 储存当前已选信息
-            @selected = []
+
             # 选择框
-            @selectView = new SelectView
+            @memberSelectorView = new MemberSelectorView
             # 动态加载导航树节点
-            @selectView.treeView.on 'load', (nodeView, nodeModel) ->
+            @memberSelectorView.treeView.on 'load', (nodeView, nodeModel) ->
                 load = (data) ->
                     # Todo 数据转换
-                    nodeDate = data
+                    nodeData = data
                     # 加载数据到导航树
-                    nodeView.load_nodes nodeDate
-                # 根据当前节点请求相应的URL
-                url = "api/#{nodeModel.get('id')}.json"
-                $.when(App.request 'orgtree:entities', url)
+                    nodeView.load_nodes nodeData
+                # 根据当前节点请求相应的Url
+                $.when(App.request 'orgtree:entities', nodeModel.get('id'))
                     .then load
+
+            # 获取导航树数据
+            $.when(App.request 'orgtree:entities')
+                .then _.bind @_render, this
+
+            @memberSelectorView.on 'deselect', (node) =>
+                @trigger 'deselect', node
+            @memberSelectorView.on 'select', (node) =>
+                @trigger 'select', node
+
             # 默认选项、搜索结果、点击节点结果
             @selectData = (query, nodeId) ->
                 if nodeId
@@ -103,14 +111,15 @@ define [
 
                     return data
 
-        # 渲染选择框
-        render: (dom) ->
-            @selectView.render(this, dom)
+        _render: (orgtree) ->
+            # Todo 数据转换
+            @treeDate = orgtree
+            # 渲染选择框
+            @memberSelectorView.render(@inputId, @multiple, @selectData, @treeDate)
 
-        # 加载导航树根节点
-        load_tree: (data) ->
-            @treeDate = data
+        destroy: ->
+            $("#{@inputId}").select2 'destroy'
 
         # 获取当前已选项
         get_selected: ->
-            @selected
+            @memberSelectorView.selected

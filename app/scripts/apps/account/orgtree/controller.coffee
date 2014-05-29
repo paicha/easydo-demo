@@ -29,7 +29,7 @@ define [
             @treeView.on 'load', @loadNodes
             
             # 加载一级导航树
-            $.when(App.request 'orgtree:entities', 'api/orgtree.json')
+            $.when(App.request 'orgtree:entities')
                 .then _.bind @showTree, this
             
             # ====== Test Begin ======
@@ -69,8 +69,7 @@ define [
                 nodeView.load_nodes data
             
             # 根据当前节点请求相应的URL
-            url = "api/#{nodeModel.get('id')}.json"
-            $.when(App.request 'orgtree:entities', url)
+            $.when(App.request 'orgtree:entities', nodeModel.get('id'))
                 .then load
 
         treeNode: (id) ->

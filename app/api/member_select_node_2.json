@@ -1,0 +1,30 @@
+{
+  "results": [
+    {
+      "text": "部门",
+      "children": [
+        {
+          "id": "zcer",
+          "text": "财务部"
+        }
+      ]
+    },
+    {
+      "text": "组",
+      "children": [
+        {
+          "id": "zc1er",
+          "text": "财务总监"
+        },
+        {
+          "id": "fzc2er",
+          "text": "财务助理"
+        },
+        {
+          "id": "zjl3er",
+          "text": "出纳"
+        }
+      ]
+    }
+  ]
+}

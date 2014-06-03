@@ -1,0 +1,55 @@
+{
+  "results": [
+    {
+      "text": "部门",
+      "children": [
+        {
+          "id": "CA",
+          "text": "部门1"
+        },
+        {
+          "id": "AZ",
+          "text": "部门2"
+        }
+      ]
+    },
+    {
+      "text": "组",
+      "children": [
+        {
+          "id": "FL",
+          "text": "组1"
+        }
+      ]
+    },
+    {
+      "text": "人员",
+      "children": [
+        {
+          "id": "FLs",
+          "text": "小明"
+        },
+        {
+          "id": "FLss",
+          "text": "小明2"
+        },
+        {
+          "id": "FLs22s",
+          "text": "小明3"
+        },
+        {
+          "id": "FLsh",
+          "text": "小明4"
+        },
+        {
+          "id": "FLssh",
+          "text": "小明5"
+        },
+        {
+          "id": "FLs22sh",
+          "text": "小明6"
+        }
+      ]
+    }
+  ]
+}

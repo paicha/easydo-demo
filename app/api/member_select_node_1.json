@@ -1,0 +1,38 @@
+{
+  "results": [
+    {
+      "text": "部门",
+      "children": [
+        {
+          "id": "zc",
+          "text": "总裁"
+        },
+        {
+          "id": "fzc",
+          "text": "副总裁"
+        },
+        {
+          "id": "zjl",
+          "text": "总经理"
+        }
+      ]
+    },
+    {
+      "text": "人员",
+      "children": [
+        {
+          "id": "zc1",
+          "text": "张三"
+        },
+        {
+          "id": "fzc2",
+          "text": "李四"
+        },
+        {
+          "id": "zjl3",
+          "text": "王五"
+        }
+      ]
+    }
+  ]
+}

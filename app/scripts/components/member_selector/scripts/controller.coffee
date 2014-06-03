@@ -37,79 +37,11 @@ define [
             @memberSelectorView.on 'select', (node) =>
                 @trigger 'select', node
 
-            # 默认选项、搜索结果、点击节点结果
-            @selectData = (query, nodeId) ->
-                if nodeId
-                    selectData =
-                        results:[
-                                  {
-                                    text: "部门"
-                                    children: [
-                                      {
-                                        id: nodeId
-                                        text: "nodeId:" + nodeId
-                                      }
-                                    ]
-                                  }
-                                ]
-                    
-                else if query.term is ""
-                    selectData =
-                        results:[
-                            {
-                              text: "部门"
-                              children: [
-                                {
-                                  id: "CA"
-                                  text: "部门1"
-                                }
-                                {
-                                  id: "AZ"
-                                  text: "部门2"
-                                }
-                              ]
-                            }
-                            {
-                              text: "组"
-                              children: [
-                                id: "FL"
-                                text: "组1"
-                              ]
-                            }
-                            {
-                              text: "人员"
-                              children: [
-                                {
-                                  id: "FLs"
-                                  text: "小明"
-                                }
-                                {
-                                  id: "FLss"
-                                  text: "小明2"
-                                }
-                                {
-                                  id: "FLs22s"
-                                  text: "小明3"
-                                }
-                              ]
-                            }
-                        ]
-                else
-                    data = results: []
-                    i = 1
-                    while i < 5
-                      s = ""
-                      j = 0
-                      while j < i
-                        s = s + query.term
-                        j++
-                      data.results.push
-                        id: query.term + i
-                        text: s
-
-                      i++
-
-                    return data
+            @selectData = (query, currentNodeId) ->
+                load = (data) ->
+                    query.callback data
+                $.when(App.request 'memberSelect:entities', query.term, currentNodeId)
+                    .then load
 
         _render: (orgtree) ->
             # Todo 数据转换

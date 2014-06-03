@@ -53,10 +53,10 @@ require [
     # entities
     'entities/navbar'
     'entities/orgtree'
-    'entities/disk_select'
+    'entities/member_select'
     # apps
     'apps/desks/app'
     'apps/sales/app'
     'apps/account/app'
-], (Backbone, _, bootstrap, App, NavbarEntities, OrgTreeEntities, DesksApp, SalesApp, AccountApp) ->
+], (Backbone, _, bootstrap, App, NavbarEntities, OrgTreeEntities, MemberSelect, DesksApp, SalesApp, AccountApp) ->
     App.start()

@@ -2,21 +2,21 @@
   {
     "nodeName": "财务部职位一",
     "id": "20",
-    "icon": "icon-user",
+    "icon": "fa-user",
     "is_folder":false,
     "nodes": []
   },
   {
     "nodeName": "财务部职位二",
     "id": "21",
-    "icon": "icon-user",
+    "icon": "fa-user",
     "is_folder":false,
     "nodes": []
   },
   {
     "nodeName": "财务部职位三",
     "id": "22",
-    "icon": "icon-user",
+    "icon": "fa-user",
     "is_folder":false,
     "nodes": []
   }

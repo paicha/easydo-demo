@@ -1,0 +1,802 @@
+[
+  {
+    "name": "Afghanistan",
+    "url": "http://en.wikipedia.org/wiki/Afghanistan",
+    "pop": 25500100,
+    "date": "2013-01-01",
+    "percentage": 0.36,
+    "id": 1
+  },
+  {
+    "name": "Albania",
+    "url": "http://en.wikipedia.org/wiki/Albania",
+    "pop": 2831741,
+    "date": "2011-10-01",
+    "percentage": 0.04,
+    "id": 2
+  },
+  {
+    "name": "Algeria",
+    "url": "http://en.wikipedia.org/wiki/Algeria",
+    "pop": 37100000,
+    "date": "2012-01-01",
+    "percentage": 0.53,
+    "id": 3
+  },
+  {
+    "name": "American Samoa (USA)",
+    "url": "http://en.wikipedia.org/wiki/American_Samoa",
+    "pop": 55519,
+    "date": "2010-04-01",
+    "percentage": 0.00079,
+    "id": 4
+  },
+  {
+    "name": "Andorra",
+    "url": "http://en.wikipedia.org/wiki/Andorra",
+    "pop": 78115,
+    "date": "2011-07-01",
+    "percentage": 0.0011,
+    "id": 5
+  },
+  {
+    "name": "Angola",
+    "url": "http://en.wikipedia.org/wiki/Angola",
+    "pop": 20609294,
+    "date": "2012-07-01",
+    "percentage": 0.29,
+    "id": 6
+  },
+  {
+    "name": "Anguilla (UK)",
+    "url": "http://en.wikipedia.org/wiki/Anguilla",
+    "pop": 13452,
+    "date": "2011-05-11",
+    "percentage": 0.00019,
+    "id": 7
+  },
+  {
+    "name": "Antigua and Barbuda",
+    "url": "http://en.wikipedia.org/wiki/Antigua_and_Barbuda",
+    "pop": 86295,
+    "date": "2011-05-27",
+    "percentage": 0.0012,
+    "id": 8
+  },
+  {
+    "name": "Argentina",
+    "url": "http://en.wikipedia.org/wiki/Argentina",
+    "pop": 40117096,
+    "date": "2010-10-27",
+    "percentage": 0.57,
+    "id": 9
+  },
+  {
+    "name": "Armenia",
+    "url": "http://en.wikipedia.org/wiki/Armenia",
+    "pop": 3275700,
+    "date": "2012-06-01",
+    "percentage": 0.046,
+    "id": 10
+  },
+  {
+    "name": "Aruba (Netherlands)",
+    "url": "http://en.wikipedia.org/wiki/Aruba",
+    "pop": 101484,
+    "date": "2010-09-29",
+    "percentage": 0.0014,
+    "id": 11
+  },
+  {
+    "name": "Australia",
+    "url": "http://en.wikipedia.org/wiki/Australia",
+    "pop": 22808690,
+    "date": "2012-11-11",
+    "percentage": 0.32,
+    "id": 12
+  },
+  {
+    "name": "Austria",
+    "url": "http://en.wikipedia.org/wiki/Austria",
+    "pop": 8452835,
+    "date": "2012-07-01",
+    "percentage": 0.12,
+    "id": 13
+  },
+  {
+    "name": "Azerbaijan",
+    "url": "http://en.wikipedia.org/wiki/Azerbaijan",
+    "pop": 9235100,
+    "date": "2012-01-01",
+    "percentage": 0.13,
+    "id": 14
+  },
+  {
+    "name": "Bahamas",
+    "url": "http://en.wikipedia.org/wiki/The_Bahamas",
+    "pop": 353658,
+    "date": "2010-05-03",
+    "percentage": 0.005,
+    "id": 15
+  },
+  {
+    "name": "Bahrain",
+    "url": "http://en.wikipedia.org/wiki/Bahrain",
+    "pop": 1234571,
+    "date": "2010-04-27",
+    "percentage": 0.018,
+    "id": 16
+  },
+  {
+    "name": "Bangladesh",
+    "url": "http://en.wikipedia.org/wiki/Bangladesh",
+    "pop": 152518015,
+    "date": "2012-07-16",
+    "percentage": 2.16,
+    "id": 17
+  },
+  {
+    "name": "Barbados",
+    "url": "http://en.wikipedia.org/wiki/Barbados",
+    "pop": 274200,
+    "date": "2010-07-01",
+    "percentage": 0.0039,
+    "id": 18
+  },
+  {
+    "name": "Belarus",
+    "url": "http://en.wikipedia.org/wiki/Belarus",
+    "pop": 9459000,
+    "date": "2012-09-01",
+    "percentage": 0.13,
+    "id": 19
+  },
+  {
+    "name": "Belgium",
+    "url": "http://en.wikipedia.org/wiki/Belgium",
+    "pop": 10839905,
+    "date": "2010-01-01",
+    "percentage": 0.15,
+    "id": 20
+  },
+  {
+    "name": "Belize",
+    "url": "http://en.wikipedia.org/wiki/Belize",
+    "pop": 312971,
+    "date": "2010-05-12",
+    "percentage": 0.0044,
+    "id": 21
+  },
+  {
+    "name": "Benin",
+    "url": "http://en.wikipedia.org/wiki/Benin",
+    "pop": 9352000,
+    "date": "2012-07-01",
+    "percentage": 0.13,
+    "id": 22
+  },
+  {
+    "name": "Bermuda (UK)",
+    "url": "http://en.wikipedia.org/wiki/Bermuda",
+    "pop": 64237,
+    "date": "2010-05-20",
+    "percentage": 0.00091,
+    "id": 23
+  },
+  {
+    "name": "Bhutan",
+    "url": "http://en.wikipedia.org/wiki/Bhutan",
+    "pop": 720679,
+    "date": "2012-07-01",
+    "percentage": 0.01,
+    "id": 24
+  },
+  {
+    "name": "Bolivia",
+    "url": "http://en.wikipedia.org/wiki/Bolivia",
+    "pop": 10426155,
+    "date": "2010-07-01",
+    "percentage": 0.15,
+    "id": 25
+  },
+  {
+    "name": "Bosnia and Herzegovina",
+    "url": "http://en.wikipedia.org/wiki/Bosnia_and_Herzegovina",
+    "pop": 3868621,
+    "date": "2012-06-30",
+    "percentage": 0.055,
+    "id": 26
+  },
+  {
+    "name": "Botswana",
+    "url": "http://en.wikipedia.org/wiki/Botswana",
+    "pop": 2024904,
+    "date": "2011-08-22",
+    "percentage": 0.029,
+    "id": 27
+  },
+  {
+    "name": "Brazil",
+    "url": "http://en.wikipedia.org/wiki/Brazil",
+    "pop": 193946886,
+    "date": "2012-07-01",
+    "percentage": 2.75,
+    "id": 28
+  },
+  {
+    "name": "British Virgin Islands (UK)",
+    "url": "http://en.wikipedia.org/wiki/British_Virgin_Islands",
+    "pop": 29537,
+    "date": "2010-07-01",
+    "percentage": 0.00042,
+    "id": 29
+  },
+  {
+    "name": "Brunei",
+    "url": "http://en.wikipedia.org/wiki/Brunei",
+    "pop": 393162,
+    "date": "2011-06-20",
+    "percentage": 0.0056,
+    "id": 30
+  },
+  {
+    "name": "Bulgaria",
+    "url": "http://en.wikipedia.org/wiki/Bulgaria",
+    "pop": 7364570,
+    "date": "2011-02-01",
+    "percentage": 0.1,
+    "id": 31
+  },
+  {
+    "name": "Burkina Faso",
+    "url": "http://en.wikipedia.org/wiki/Burkina_Faso",
+    "pop": 15730977,
+    "date": "2010-07-01",
+    "percentage": 0.22,
+    "id": 32
+  },
+  {
+    "name": "Burundi",
+    "url": "http://en.wikipedia.org/wiki/Burundi",
+    "pop": 8749000,
+    "date": "2012-07-01",
+    "percentage": 0.12,
+    "id": 33
+  },
+  {
+    "name": "Cambodia",
+    "url": "http://en.wikipedia.org/wiki/Cambodia",
+    "pop": 14478000,
+    "date": "2012-07-01",
+    "percentage": 0.21,
+    "id": 34
+  },
+  {
+    "name": "Cameroon",
+    "url": "http://en.wikipedia.org/wiki/Cameroon",
+    "pop": 19406100,
+    "date": "2010-01-01",
+    "percentage": 0.28,
+    "id": 35
+  },
+  {
+    "name": "Canada",
+    "url": "http://en.wikipedia.org/wiki/Canada",
+    "pop": 34974700,
+    "date": "2012-11-11",
+    "percentage": 0.5,
+    "id": 36
+  },
+  {
+    "name": "Cape Verde",
+    "url": "http://en.wikipedia.org/wiki/Cape_Verde",
+    "pop": 491875,
+    "date": "2010-06-16",
+    "percentage": 0.007,
+    "id": 37
+  },
+  {
+    "name": "Caribbean Netherlands (Netherlands)",
+    "url": "http://en.wikipedia.org/wiki/Caribbean_Netherlands",
+    "pop": 21133,
+    "date": "2011-01-01",
+    "percentage": 0.0003,
+    "id": 38
+  },
+  {
+    "name": "Cayman Islands (UK)",
+    "url": "http://en.wikipedia.org/wiki/Cayman_Islands",
+    "pop": 55456,
+    "date": "2010-10-10",
+    "percentage": 0.00079,
+    "id": 39
+  },
+  {
+    "name": "Central African Republic",
+    "url": "http://en.wikipedia.org/wiki/Central_African_Republic",
+    "pop": 4576000,
+    "date": "2012-07-01",
+    "percentage": 0.065,
+    "id": 40
+  },
+  {
+    "name": "Chad",
+    "url": "http://en.wikipedia.org/wiki/Chad",
+    "pop": 11274106,
+    "date": "2009-05-20",
+    "percentage": 0.16,
+    "id": 41
+  },
+  {
+    "name": "Chile",
+    "url": "http://en.wikipedia.org/wiki/Chile",
+    "pop": 16572475,
+    "date": "2012-04-09",
+    "percentage": 0.24,
+    "id": 42
+  },
+  {
+    "name": "China[8]",
+    "url": "http://en.wikipedia.org/wiki/China",
+    "pop": 1347350000,
+    "date": "2011-12-31",
+    "percentage": 19.11,
+    "id": 43
+  },
+  {
+    "name": "Christmas Island (Australia)",
+    "url": "http://en.wikipedia.org/wiki/Christmas_Island",
+    "pop": 2072,
+    "date": "2011-08-09",
+    "percentage": 0.00002,
+    "id": 44
+  },
+  {
+    "name": "Cocos (Keeling) Islands (Australia)",
+    "url": "http://en.wikipedia.org/wiki/Cocos_(Keeling)_Islands",
+    "pop": 550,
+    "date": "2011-08-09",
+    "percentage": 0.000008,
+    "id": 45
+  },
+  {
+    "name": "Colombia",
+    "url": "http://en.wikipedia.org/wiki/Colombia",
+    "pop": 46780000,
+    "date": "2012-11-11",
+    "percentage": 0.66,
+    "id": 46
+  },
+  {
+    "name": "Comoros[18]",
+    "url": "http://en.wikipedia.org/wiki/Comoros",
+    "pop": 669300,
+    "date": "2009-07-01",
+    "percentage": 0.0095,
+    "id": 47
+  },
+  {
+    "name": "Cook Islands (NZ)",
+    "url": "http://en.wikipedia.org/wiki/Cook_Islands",
+    "pop": 17791,
+    "date": "2011-12-01",
+    "percentage": 0.00025,
+    "id": 48
+  },
+  {
+    "name": "Costa Rica",
+    "url": "http://en.wikipedia.org/wiki/Costa_Rica",
+    "pop": 4301712,
+    "date": "2011-06-03",
+    "percentage": 0.061,
+    "id": 49
+  },
+  {
+    "name": "Croatia",
+    "url": "http://en.wikipedia.org/wiki/Croatia",
+    "pop": 4290612,
+    "date": "2011-03-31",
+    "percentage": 0.061,
+    "id": 50
+  },
+  {
+    "name": "Cuba",
+    "url": "http://en.wikipedia.org/wiki/Cuba",
+    "pop": 11247925,
+    "date": "2011-12-31",
+    "percentage": 0.16,
+    "id": 51
+  },
+  {
+    "name": "Curaçao (Netherlands)",
+    "url": "http://en.wikipedia.org/wiki/Cura%C3%A7ao",
+    "pop": 149679,
+    "date": "2011-03-26",
+    "percentage": 0.0021,
+    "id": 52
+  },
+  {
+    "name": "Cyprus[17]",
+    "url": "http://en.wikipedia.org/wiki/Cyprus",
+    "pop": 838897,
+    "date": "2011-10-01",
+    "percentage": 0.012,
+    "id": 53
+  },
+  {
+    "name": "Czech Republic",
+    "url": "http://en.wikipedia.org/wiki/Czech_Republic",
+    "pop": 10507566,
+    "date": "2012-03-31",
+    "percentage": 0.15,
+    "id": 54
+  },
+  {
+    "name": "Democratic Republic of the Congo",
+    "url": "http://en.wikipedia.org/wiki/Democratic_Republic_of_the_Congo",
+    "pop": 69575000,
+    "date": "2012-07-01",
+    "percentage": 0.99,
+    "id": 55
+  },
+  {
+    "name": "Denmark",
+    "url": "http://en.wikipedia.org/wiki/Denmark",
+    "pop": 5587085,
+    "date": "2012-07-01",
+    "percentage": 0.079,
+    "id": 56
+  },
+  {
+    "name": "Djibouti",
+    "url": "http://en.wikipedia.org/wiki/Djibouti",
+    "pop": 818159,
+    "date": "2009-05-29",
+    "percentage": 0.012,
+    "id": 57
+  },
+  {
+    "name": "Dominica",
+    "url": "http://en.wikipedia.org/wiki/Dominica",
+    "pop": 71293,
+    "date": "2011-05-14",
+    "percentage": 0.001,
+    "id": 58
+  },
+  {
+    "name": "Dominican Republic",
+    "url": "http://en.wikipedia.org/wiki/Dominican_Republic",
+    "pop": 9445281,
+    "date": "2010-12-01",
+    "percentage": 0.13,
+    "id": 59
+  },
+  {
+    "name": "Ecuador",
+    "url": "http://en.wikipedia.org/wiki/Ecuador",
+    "pop": 14483499,
+    "date": "2010-11-28",
+    "percentage": 0.21,
+    "id": 60
+  },
+  {
+    "name": "Egypt",
+    "url": "http://en.wikipedia.org/wiki/Egypt",
+    "pop": 82814000,
+    "date": "2012-11-11",
+    "percentage": 1.17,
+    "id": 61
+  },
+  {
+    "name": "El Salvador",
+    "url": "http://en.wikipedia.org/wiki/El_Salvador",
+    "pop": 6183000,
+    "date": "2010-06-30",
+    "percentage": 0.088,
+    "id": 62
+  },
+  {
+    "name": "Equatorial Guinea",
+    "url": "http://en.wikipedia.org/wiki/Equatorial_Guinea",
+    "pop": 740000,
+    "date": "2012-07-01",
+    "percentage": 0.01,
+    "id": 63
+  },
+  {
+    "name": "Eritrea",
+    "url": "http://en.wikipedia.org/wiki/Eritrea",
+    "pop": 5581000,
+    "date": "2012-07-01",
+    "percentage": 0.079,
+    "id": 64
+  },
+  {
+    "name": "Estonia",
+    "url": "http://en.wikipedia.org/wiki/Estonia",
+    "pop": 1294236,
+    "date": "2012-03-31",
+    "percentage": 0.018,
+    "id": 65
+  },
+  {
+    "name": "Ethiopia",
+    "url": "http://en.wikipedia.org/wiki/Ethiopia",
+    "pop": 84320987,
+    "date": "2012-07-01",
+    "percentage": 1.2,
+    "id": 66
+  },
+  {
+    "name": "Falkland Islands (UK)[21]",
+    "url": "http://en.wikipedia.org/wiki/Falkland_Islands",
+    "pop": 2563,
+    "date": "2012-04-15",
+    "percentage": 0.00003,
+    "id": 67
+  },
+  {
+    "name": "Faroe Islands (Denmark)",
+    "url": "http://en.wikipedia.org/wiki/Faroe_Islands",
+    "pop": 48459,
+    "date": "2012-07-01",
+    "percentage": 0.00069,
+    "id": 68
+  },
+  {
+    "name": "Federated States of Micronesia",
+    "url": "http://en.wikipedia.org/wiki/Federated_States_of_Micronesia",
+    "pop": 102843,
+    "date": "2010-04-04",
+    "percentage": 0.0015,
+    "id": 69
+  },
+  {
+    "name": "Fiji",
+    "url": "http://en.wikipedia.org/wiki/Fiji",
+    "pop": 876000,
+    "date": "2012-07-01",
+    "percentage": 0.012,
+    "id": 70
+  },
+  {
+    "name": "Finland",
+    "url": "http://en.wikipedia.org/wiki/Finland",
+    "pop": 5424220,
+    "date": "2012-11-11",
+    "percentage": 0.08,
+    "id": 71
+  },
+  {
+    "name": "France[9]",
+    "url": "http://en.wikipedia.org/wiki/France",
+    "pop": 65350000,
+    "date": "2012-01-01",
+    "percentage": 0.93,
+    "id": 72
+  },
+  {
+    "name": "French Guiana (France)",
+    "url": "http://en.wikipedia.org/wiki/French_Guiana",
+    "pop": 224469,
+    "date": "2009-01-01",
+    "percentage": 0.0032,
+    "id": 73
+  },
+  {
+    "name": "French Polynesia (France)",
+    "url": "http://en.wikipedia.org/wiki/French_Polynesia",
+    "pop": 277000,
+    "date": "2012-07-01",
+    "percentage": 0.0039,
+    "id": 74
+  },
+  {
+    "name": "Gabon",
+    "url": "http://en.wikipedia.org/wiki/Gabon",
+    "pop": 1564000,
+    "date": "2012-07-01",
+    "percentage": 0.022,
+    "id": 75
+  },
+  {
+    "name": "Gambia",
+    "url": "http://en.wikipedia.org/wiki/The_Gambia",
+    "pop": 1825000,
+    "date": "2012-07-01",
+    "percentage": 0.026,
+    "id": 76
+  },
+  {
+    "name": "Georgia[14]",
+    "url": "http://en.wikipedia.org/wiki/Georgia_(country)",
+    "pop": 4497600,
+    "date": "2012-01-01",
+    "percentage": 0.064,
+    "id": 77
+  },
+  {
+    "name": "Germany",
+    "url": "http://en.wikipedia.org/wiki/Germany",
+    "pop": 81857000,
+    "date": "2012-04-30",
+    "percentage": 1.16,
+    "id": 78
+  },
+  {
+    "name": "Ghana",
+    "url": "http://en.wikipedia.org/wiki/Ghana",
+    "pop": 24658823,
+    "date": "2010-09-26",
+    "percentage": 0.35,
+    "id": 79
+  },
+  {
+    "name": "Gibraltar (UK)[20]",
+    "url": "http://en.wikipedia.org/wiki/Gibraltar",
+    "pop": 29752,
+    "date": "2011-07-01",
+    "percentage": 0.00042,
+    "id": 80
+  },
+  {
+    "name": "Greece",
+    "url": "http://en.wikipedia.org/wiki/Greece",
+    "pop": 10787690,
+    "date": "2011-05-24",
+    "percentage": 0.15,
+    "id": 81
+  },
+  {
+    "name": "Greenland (Denmark)",
+    "url": "http://en.wikipedia.org/wiki/Greenland",
+    "pop": 56749,
+    "date": "2012-01-01",
+    "percentage": 0.0008,
+    "id": 82
+  },
+  {
+    "name": "Grenada",
+    "url": "http://en.wikipedia.org/wiki/Grenada",
+    "pop": 110821,
+    "date": "2009-07-01",
+    "percentage": 0.0016,
+    "id": 83
+  },
+  {
+    "name": "Guadeloupe (France)",
+    "url": "http://en.wikipedia.org/wiki/Guadeloupe",
+    "pop": 401554,
+    "date": "2009-01-01",
+    "percentage": 0.0057,
+    "id": 84
+  },
+  {
+    "name": "Guam (USA)",
+    "url": "http://en.wikipedia.org/wiki/Guam",
+    "pop": 159358,
+    "date": "2010-04-01",
+    "percentage": 0.0023,
+    "id": 85
+  },
+  {
+    "name": "Guatemala",
+    "url": "http://en.wikipedia.org/wiki/Guatemala",
+    "pop": 14713763,
+    "date": "2011-07-01",
+    "percentage": 0.21,
+    "id": 86
+  },
+  {
+    "name": "Guernsey (UK)",
+    "url": "http://en.wikipedia.org/wiki/Guernsey",
+    "pop": 62431,
+    "date": "2010-03-31",
+    "percentage": 0.00089,
+    "id": 87
+  },
+  {
+    "name": "Guinea",
+    "url": "http://en.wikipedia.org/wiki/Guinea",
+    "pop": 10824200,
+    "date": "2010-07-01",
+    "percentage": 0.15,
+    "id": 88
+  },
+  {
+    "name": "Guinea-Bissau",
+    "url": "http://en.wikipedia.org/wiki/Guinea-Bissau",
+    "pop": 1520830,
+    "date": "2009-03-01",
+    "percentage": 0.022,
+    "id": 89
+  },
+  {
+    "name": "Guyana",
+    "url": "http://en.wikipedia.org/wiki/Guyana",
+    "pop": 784894,
+    "date": "2010-07-01",
+    "percentage": 0.011,
+    "id": 90
+  },
+  {
+    "name": "Haiti",
+    "url": "http://en.wikipedia.org/wiki/Haiti",
+    "pop": 10085214,
+    "date": "2010-07-01",
+    "percentage": 0.14,
+    "id": 91
+  },
+  {
+    "name": "Honduras",
+    "url": "http://en.wikipedia.org/wiki/Honduras",
+    "pop": 8385072,
+    "date": "2012-07-01",
+    "percentage": 0.12,
+    "id": 92
+  },
+  {
+    "name": "Hong Kong (China)[13]",
+    "url": "http://en.wikipedia.org/wiki/Hong_Kong",
+    "pop": 7103700,
+    "date": "2011-12-31",
+    "percentage": 0.1,
+    "id": 93
+  },
+  {
+    "name": "Hungary",
+    "url": "http://en.wikipedia.org/wiki/Hungary",
+    "pop": 9957731,
+    "date": "2012-01-01",
+    "percentage": 0.14,
+    "id": 94
+  },
+  {
+    "name": "Iceland",
+    "url": "http://en.wikipedia.org/wiki/Iceland",
+    "pop": 320060,
+    "date": "2012-04-01",
+    "percentage": 0.0045,
+    "id": 95
+  },
+  {
+    "name": "India",
+    "url": "http://en.wikipedia.org/wiki/India",
+    "pop": 1210193422,
+    "date": "2011-03-01",
+    "percentage": 17.16,
+    "id": 96
+  },
+  {
+    "name": "Indonesia",
+    "url": "http://en.wikipedia.org/wiki/Indonesia",
+    "pop": 237641326,
+    "date": "2010-05-01",
+    "percentage": 3.37,
+    "id": 97
+  },
+  {
+    "name": "Iran",
+    "url": "http://en.wikipedia.org/wiki/Iran",
+    "pop": 75149669,
+    "date": "2011-10-24",
+    "percentage": 1.07,
+    "id": 98
+  },
+  {
+    "name": "Iraq",
+    "url": "http://en.wikipedia.org/wiki/Iraq",
+    "pop": 33330000,
+    "date": "2011-07-01",
+    "percentage": 0.47,
+    "id": 99
+  },
+  {
+    "name": "Ireland",
+    "url": "http://en.wikipedia.org/wiki/Republic_of_Ireland",
+    "pop": 4588252,
+    "date": "2011-04-10",
+    "percentage": 0.065,
+    "id": 100
+  }
+]

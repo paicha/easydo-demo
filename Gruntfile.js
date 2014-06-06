@@ -74,29 +74,6 @@ module.exports = function(grunt) {
                 tasks: ['test:true']
             }
         },
-        bowercopy: {
-            options: {
-                srcPrefix: '<%= yeoman.app %>/bower_components'
-            },
-            scripts: {
-                options: {
-                    destPrefix: '<%= yeoman.app %>/scripts/vendor'
-                },
-                files: {
-                    'backbone.js': 'backbone/backbone.js',
-                    'jquery.js': 'jquery/dist/jquery.js',
-                    'backbone.marionette.js': 'marionette/lib/core/backbone.marionette.js',
-                    'require.js': 'requirejs/require.js',
-                    'text.js': 'requirejs-text/text.js',
-                    'underscore.js': 'underscore/underscore.js',
-                    'bootstrap.js': 'bootstrap/dist/js/bootstrap.js',
-                    'backbone.localStorage.js': 'backbone.localStorage/backbone.localStorage.js',
-                    'backbone.routeFilter.js': 'backbone.routeFilter/dist/backbone.routeFilter.js',
-                    'treeview.js': 'backbone.marionette.treeview/dist/scripts/47756972.treeview.js',
-                    'select2.js': 'select2/select2.js'
-                }
-            }
-        },
         connect: {
             options: {
                 port: grunt.option('port') || SERVER_PORT,
@@ -171,6 +148,9 @@ module.exports = function(grunt) {
             }
         },
         coffee: {
+            options: {
+                bare: true
+            },
             dist: {
                 files: [{
                     // rather than compiling multiple files here you should
@@ -227,16 +207,23 @@ module.exports = function(grunt) {
                     baseUrl: '.tmp/scripts',
                     optimize: 'none',
                     paths: {
-                        'jquery': '../../<%= yeoman.app %>/scripts/vendor/jquery',
-                        'underscore': '../../<%= yeoman.app %>/scripts/vendor/underscore',
-                        'backbone': '../../<%= yeoman.app %>/scripts/vendor/backbone',
-                        'marionette': '../../<%= yeoman.app %>/scripts/vendor/backbone.marionette',
-                        'text': '../../<%= yeoman.app %>/scripts/vendor/text',
-                        'bootstrap': '../../<%= yeoman.app %>/scripts/vendor/bootstrap',
-                        'localStorage': '../../<%= yeoman.app %>/scripts/vendor/backbone.localStorage',
-                        'routeFilter': '../../<%= yeoman.app %>/scripts/vendor/backbone.routeFilter',
-                        'treeview': '../../<%= yeoman.app %>/scripts/vendor/treeview',
-                        'select2': '../../<%= yeoman.app %>/scripts/vendor/select2',
+                        'jquery': '../../<%= yeoman.app %>/bower_components/jquery/dist/jquery',
+                        'backbone': '../../<%= yeoman.app %>/bower_components/backbone/backbone',
+                        'marionette': '../../<%= yeoman.app %>/bower_components/marionette/lib/core/backbone.marionette',
+                        'text': '../../<%= yeoman.app %>/bower_components/requirejs-text/text',
+                        'bootstrap': '../../<%= yeoman.app %>/bower_components/bootstrap/dist/js/bootstrap',
+                        'localStorage': '../../<%= yeoman.app %>/bower_components/backbone.localStorage/backbone.localStorage',
+                        'routeFilter': '../../<%= yeoman.app %>/bower_components/backbone.routeFilter/dist/backbone.routeFilter',
+                        'treeview': '../../<%= yeoman.app %>/bower_components/backbone.marionette.treeview/dist/scripts/c44b7e7a.treeview',
+                        'select2': '../../<%= yeoman.app %>/bower_components/select2/select2',
+                        'ace': '../../<%= yeoman.app %>/bower_components/ace-builds/src-noconflict/ace',
+                        'joint': '../../<%= yeoman.app %>/bower_components/joint/dist/joint.clean',
+                        'geometry': '../../<%= yeoman.app %>/bower_components/joint/src/geometry',
+                        'vectorizer': '../../<%= yeoman.app %>/bower_components/joint/src/vectorizer',
+                        'backgrid': '../../<%= yeoman.app %>/bower_components/backgrid/lib/backgrid',
+                        'paginator': '../../<%= yeoman.app %>/bower_components/backbone.paginator/lib/backbone.paginator',
+                        'lodash': '../../<%= yeoman.app %>/bower_components/lodash/dist/lodash',
+                        'backboneForms': '../../<%= yeoman.app %>/bower_components/backbone-forms/distribution.amd/backbone-forms'
                     },
                     /*paths: {
                         'templates': '../../.tmp/scripts/templates',
@@ -408,8 +395,6 @@ module.exports = function(grunt) {
 
         grunt.task.run([
             'clean:server',
-            //'clean:vendor',
-            'bowercopy',
             'coffee:dist',
             //'createDefaultTemplate',
             //'jst',
@@ -467,7 +452,6 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('default', [
-        'bowercopy',
         'jshint',
         //'test',
         'build'

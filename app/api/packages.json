@@ -1,0 +1,83 @@
+[
+  {
+    "nodeName": "概览",
+    "id": "demo",
+    "icon": "fa-home",
+    "is_folder": true,
+    "nodes": [
+      {
+        "nodeName": "表单",
+        "id": "forms",
+        "icon": "fa-list-alt",
+        "is_folder": true,
+        "nodes": [
+          {
+            "nodeName": "form1",
+            "id": "forms-gagdfg",
+            "icon": "",
+            "is_folder": false,
+            "nodes": []
+          },
+          {
+            "nodeName": "form2",
+            "id": "forms-vxcvxb",
+            "icon": "",
+            "is_folder": false,
+            "nodes": []
+          }
+        ]
+      },
+      {
+        "nodeName": "流程",
+        "id": "flowchart",
+        "icon": "fa-tasks",
+        "is_folder": true,
+        "nodes": [
+          {
+            "nodeName": "flowchart1",
+            "id": "flowchart-ewr789w4f",
+            "icon": "",
+            "is_folder": false,
+            "nodes": []
+          },
+          {
+            "nodeName": "flowchart2",
+            "id": "flowchart-daskljl46",
+            "icon": "",
+            "is_folder": false,
+            "nodes": []
+          }
+        ]
+      },
+      {
+        "nodeName": "代码",
+        "id": "code",
+        "icon": "fa-file-code-o",
+        "is_folder": true,
+        "nodes": [
+          {
+            "nodeName": "code1",
+            "id": "code-qwe5465sfd",
+            "icon": "",
+            "is_folder": false,
+            "nodes": []
+          },
+          {
+            "nodeName": "code2",
+            "id": "code-a12dwet4ew",
+            "icon": "",
+            "is_folder": false,
+            "nodes": []
+          }
+        ]
+      },
+      {
+        "nodeName": "应用设置",
+        "id": "setting",
+        "icon": "fa-cog",
+        "is_folder": false,
+        "nodes": []
+      }
+    ]
+  }
+]

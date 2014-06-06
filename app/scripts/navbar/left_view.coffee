@@ -20,4 +20,4 @@ define [
 
         setCurrent: (appName) ->
             $('#navbar li').removeClass 'active'
-            $("##{appName}").tab 'show'
+            $(".#{appName}").tab 'show'
